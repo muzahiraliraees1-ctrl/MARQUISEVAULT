@@ -1,8 +1,5 @@
 import { notFound } from "next/navigation"
 import { products, brands } from "@/lib/data"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { CartDrawer } from "@/components/cart-drawer"
 import { CollectionGrid } from "@/components/collection-grid"
 
 interface BrandPageProps {
@@ -38,23 +35,18 @@ export default async function BrandPage({ params }: BrandPageProps) {
   }
 
   const brandProducts = products.filter(
-    (p) => p.brand.toLowerCase().replace(" ", "-") === id || 
-           p.brand.toLowerCase() === brand.name.toLowerCase()
+    (p) => p.brand.toLowerCase().replace(" ", "-") === id ||
+      p.brand.toLowerCase() === brand.name.toLowerCase()
   )
 
   return (
-    <>
-      <Header />
-      <main className="min-h-screen">
-        <CollectionGrid
-          products={brandProducts}
-          title={brand.name}
-          description={brand.description}
-          showBrandHero
-        />
-      </main>
-      <Footer />
-      <CartDrawer />
-    </>
+    <main className="min-h-screen">
+      <CollectionGrid
+        products={brandProducts}
+        title={brand.name}
+        description={brand.description}
+        showBrandHero
+      />
+    </main>
   )
 }

@@ -1,8 +1,5 @@
 import { notFound } from "next/navigation"
 import { products, categories } from "@/lib/data"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { CartDrawer } from "@/components/cart-drawer"
 import { CollectionGrid } from "@/components/collection-grid"
 
 interface CollectionPageProps {
@@ -19,7 +16,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: CollectionPageProps) {
   const { slug } = await params
-  
+
   if (slug === "new") {
     return {
       title: "New Arrivals | LUXE BAGS",
@@ -69,17 +66,12 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
   }
 
   return (
-    <>
-      <Header />
-      <main className="min-h-screen">
-        <CollectionGrid
-          products={filteredProducts}
-          title={title}
-          description={description}
-        />
-      </main>
-      <Footer />
-      <CartDrawer />
-    </>
+    <main className="min-h-screen">
+      <CollectionGrid
+        products={filteredProducts}
+        title={title}
+        description={description}
+      />
+    </main>
   )
 }

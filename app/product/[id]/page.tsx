@@ -1,8 +1,5 @@
 import { notFound } from "next/navigation"
 import { products } from "@/lib/data"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { CartDrawer } from "@/components/cart-drawer"
 import { ProductDetails } from "@/components/product-details"
 import { RelatedProducts } from "@/components/related-products"
 
@@ -45,16 +42,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
     .slice(0, 4)
 
   return (
-    <>
-      <Header />
-      <main className="min-h-screen">
-        <ProductDetails product={product} />
-        {relatedProducts.length > 0 && (
-          <RelatedProducts products={relatedProducts} />
-        )}
-      </main>
-      <Footer />
-      <CartDrawer />
-    </>
+    <main className="min-h-screen">
+      <ProductDetails product={product} />
+      {relatedProducts.length > 0 && (
+        <RelatedProducts products={relatedProducts} />
+      )}
+    </main>
   )
 }
