@@ -131,11 +131,11 @@ export function ProductDetails({ product }: ProductDetailsProps) {
 
           <div className="flex items-baseline gap-4">
             <span className="text-3xl font-light text-primary">
-              ${product.price.toLocaleString()}
+              PKR {product.price.toLocaleString()}
             </span>
             {product.originalPrice && (
               <span className="text-xl text-muted-foreground line-through decoration-1 opacity-70">
-                ${product.originalPrice.toLocaleString()}
+                PKR {product.originalPrice.toLocaleString()}
               </span>
             )}
           </div>
@@ -187,7 +187,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
             <div className="flex items-center justify-between">
               <div className="space-y-0.5">
                 <Label htmlFor="monogram" className="text-base font-medium">Personalization</Label>
-                <p className="text-xs text-muted-foreground">Add your initials (Optional +$50)</p>
+                <p className="text-xs text-muted-foreground">Add your initials (Optional +PKR 5,000)</p>
               </div>
               <Switch
                 id="monogram"

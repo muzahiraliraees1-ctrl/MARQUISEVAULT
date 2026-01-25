@@ -51,7 +51,7 @@ const secondaryNavItems = [
 const notifications = [
   { id: 1, title: "New Order", message: "Order #ORD-006 received", time: "2 min ago", unread: true },
   { id: 2, title: "Low Stock Alert", message: "Birkin 30 is running low", time: "15 min ago", unread: true },
-  { id: 3, title: "Payment Received", message: "$8,950 from Emma Wilson", time: "1 hour ago", unread: false },
+  { id: 3, title: "Payment Received", message: "PKR 8,950 from Emma Wilson", time: "1 hour ago", unread: false },
 ]
 
 export default function AdminLayout({
@@ -155,8 +155,8 @@ export default function AdminLayout({
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 group ${isActive
-                    ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25"
-                    : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700"
+                  ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25"
+                  : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700"
                   } ${collapsed ? "justify-center" : ""}`}
                 title={collapsed ? item.label : undefined}
               >
@@ -177,8 +177,8 @@ export default function AdminLayout({
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${isActive
-                    ? "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white"
-                    : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700"
+                  ? "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white"
+                  : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700"
                   } ${collapsed ? "justify-center" : ""}`}
                 title={collapsed ? item.label : undefined}
               >

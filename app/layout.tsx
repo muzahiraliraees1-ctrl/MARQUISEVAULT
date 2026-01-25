@@ -6,6 +6,11 @@ import { CartProvider } from "@/lib/cart-context"
 import { AdminProvider } from "@/lib/admin-context"
 import './globals.css'
 
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { CartDrawer } from "@/components/cart-drawer"
+import { WhatsAppFloat } from "@/components/whatsapp-float"
+
 const playfair = Playfair_Display({ subsets: ["latin"], variable: '--font-playfair' });
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
@@ -42,7 +47,13 @@ export default function RootLayout({
       <body className={`${playfair.variable} ${inter.variable} font-sans antialiased`}>
         <AdminProvider>
           <CartProvider>
-            {children}
+            <Header />
+            <main className="min-h-screen">
+              {children}
+            </main>
+            <Footer />
+            <CartDrawer />
+            <WhatsAppFloat />
           </CartProvider>
         </AdminProvider>
         <Analytics />

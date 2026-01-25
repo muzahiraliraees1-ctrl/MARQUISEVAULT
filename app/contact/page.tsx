@@ -21,7 +21,7 @@ export default function ContactPage() {
                             <Phone className="h-5 w-5 mt-1 text-primary" />
                             <div>
                                 <p className="font-medium mb-1">Phone & WhatsApp</p>
-                                <p className="text-muted-foreground">0324 3499882</p>
+                                <p className="text-muted-foreground">+92 324 3499882</p>
                                 <p className="text-xs text-muted-foreground mt-1">Available 9am - 6pm PKT</p>
                             </div>
                         </div>
@@ -40,8 +40,8 @@ export default function ContactPage() {
                                 <p className="font-medium mb-1">Boutique</p>
                                 <p className="text-muted-foreground">
                                     Marquise Vault Headquarters<br />
-                                    Fashion Avenue, Dubai Mall<br />
-                                    Dubai, UAE
+                                    Fashion Avenue, Karachi Mall<br />
+                                    Karachi, Pakistan
                                 </p>
                             </div>
                         </div>

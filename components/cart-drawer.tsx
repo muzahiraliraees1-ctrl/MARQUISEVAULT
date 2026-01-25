@@ -100,7 +100,7 @@ export function CartDrawer() {
                           </button>
                         </div>
                         <span className="font-medium">
-                          ${(item.product.price * item.quantity).toLocaleString()}
+                          PKR {(item.product.price * item.quantity).toLocaleString()}
                         </span>
                       </div>
                     </div>
@@ -113,7 +113,7 @@ export function CartDrawer() {
               <Separator />
               <div className="flex justify-between text-lg font-medium">
                 <span>Subtotal</span>
-                <span>${total.toLocaleString()}</span>
+                <span>PKR {total.toLocaleString()}</span>
               </div>
               <p className="text-sm text-muted-foreground">
                 Shipping and taxes calculated at checkout

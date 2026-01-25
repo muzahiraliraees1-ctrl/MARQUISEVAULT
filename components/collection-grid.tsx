@@ -399,10 +399,10 @@ function FilterContent({
         <div className="space-y-3">
           {[
             { value: "all", label: "All Prices" },
-            { value: "0-2000", label: "Under $2,000" },
-            { value: "2000-5000", label: "$2,000 - $5,000" },
-            { value: "5000-10000", label: "$5,000 - $10,000" },
-            { value: "10000-", label: "Over $10,000" },
+            { value: "0-2000", label: "Under PKR 2,000" },
+            { value: "2000-5000", label: "PKR 2,000 - PKR 5,000" },
+            { value: "5000-10000", label: "PKR 5,000 - PKR 10,000" },
+            { value: "10000-", label: "Over PKR 10,000" },
           ].map((option) => (
             <label
               key={option.value}

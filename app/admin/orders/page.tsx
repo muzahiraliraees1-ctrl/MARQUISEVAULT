@@ -215,7 +215,7 @@ export default function AdminOrdersPage() {
                       </div>
                     </TableCell>
                     <TableCell>{order.date}</TableCell>
-                    <TableCell>${order.total.toLocaleString()}</TableCell>
+                    <TableCell>PKR {order.total.toLocaleString()}</TableCell>
                     <TableCell>{getStatusBadge(order.status)}</TableCell>
                     <TableCell>
                       <Dialog>
@@ -262,7 +262,7 @@ export default function AdminOrdersPage() {
                                     <span>
                                       {item.name} ({item.brand}) x{item.qty}
                                     </span>
-                                    <span>${item.price.toLocaleString()}</span>
+                                    <span>PKR {item.price.toLocaleString()}</span>
                                   </div>
                                 ))}
                               </div>
@@ -270,7 +270,7 @@ export default function AdminOrdersPage() {
                             <Separator />
                             <div className="flex justify-between font-medium">
                               <span>Total</span>
-                              <span>${order.total.toLocaleString()}</span>
+                              <span>PKR {order.total.toLocaleString()}</span>
                             </div>
                             <div className="flex gap-2 pt-4">
                               <Select defaultValue={order.status}>

@@ -100,7 +100,7 @@ export function Footer() {
                 <Link href="/contact" className="hover:text-accent transition-colors">Concierge Services</Link>
               </li>
               <li>
-                <span className="text-accent">0324 3499882</span>
+                <span className="text-accent">+92 324 3499882</span>
               </li>
               <li>
                 <Link href="/return-exchange" className="hover:text-accent transition-colors">Return & Exchange</Link>
@@ -145,7 +145,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-primary-foreground/30 font-light border-t border-primary-foreground/5 pt-8">
           <p>&copy; 2026 MARQUISE VAULT. All rights reserved.</p>
-          <p>Milan &bull; Paris &bull; Dubai &bull; New York</p>
+          <p>Karachi &bull; Milan &bull; Paris &bull; Dubai</p>
         </div>
       </div>
     </footer>

@@ -27,17 +27,17 @@ export function CheckoutForm() {
   const [isProcessing, setIsProcessing] = useState(false)
   const [shippingMethod, setShippingMethod] = useState("standard")
 
-  const shippingCost = shippingMethod === "express" ? 25 : total >= 500 ? 0 : 15
+  const shippingCost = shippingMethod === "express" ? 2500 : total >= 50000 ? 0 : 1500
   const tax = total * 0.08
   const grandTotal = total + shippingCost + tax
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsProcessing(true)
-    
+
     // Simulate processing
     await new Promise((resolve) => setTimeout(resolve, 2000))
-    
+
     clearCart()
     router.push("/checkout/success")
   }
@@ -182,7 +182,7 @@ export function CheckoutForm() {
                     </div>
                   </div>
                   <span className="font-medium">
-                    {total >= 500 ? "Free" : "$15.00"}
+                    {total >= 50000 ? "Free" : "PKR 1,500"}
                   </span>
                 </label>
                 <label className="flex items-center justify-between p-4 border border-border rounded-lg cursor-pointer hover:border-foreground transition-colors [&:has([data-state=checked])]:border-foreground mt-3">
@@ -195,7 +195,7 @@ export function CheckoutForm() {
                       </p>
                     </div>
                   </div>
-                  <span className="font-medium">$25.00</span>
+                  <span className="font-medium">PKR 2,500</span>
                 </label>
               </RadioGroup>
             </div>
@@ -254,7 +254,7 @@ export function CheckoutForm() {
               ) : (
                 <>
                   <Lock className="h-4 w-4 mr-2" />
-                  Pay ${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                  Pay PKR {grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}
                 </>
               )}
             </Button>
@@ -298,7 +298,7 @@ export function CheckoutForm() {
                     </p>
                   </div>
                   <p className="font-medium">
-                    ${(item.product.price * item.quantity).toLocaleString()}
+                    PKR {(item.product.price * item.quantity).toLocaleString()}
                   </p>
                 </div>
               ))}
@@ -309,19 +309,19 @@ export function CheckoutForm() {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Subtotal</span>
-                <span>${total.toLocaleString()}</span>
+                <span>PKR {total.toLocaleString()}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Shipping</span>
                 <span>
                   {shippingCost === 0
                     ? "Free"
-                    : `$${shippingCost.toFixed(2)}`}
+                    : `PKR ${shippingCost.toFixed(2)}`}
                 </span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Estimated Tax</span>
-                <span>${tax.toFixed(2)}</span>
+                <span>PKR {tax.toFixed(2)}</span>
               </div>
             </div>
 
@@ -330,7 +330,7 @@ export function CheckoutForm() {
             <div className="flex justify-between text-lg font-medium">
               <span>Total</span>
               <span>
-                ${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                PKR {grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}
               </span>
             </div>
 
@@ -338,7 +338,7 @@ export function CheckoutForm() {
             <div className="mt-6 pt-6 border-t border-border space-y-3">
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Truck className="h-4 w-4" />
-                <span>Free shipping on orders over $500</span>
+                <span>Free shipping on orders over PKR 50,000</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Shield className="h-4 w-4" />

@@ -40,7 +40,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       {/* Announcement Bar */}
       <div className="bg-primary text-primary-foreground text-center py-2 text-sm tracking-wide">
-        Complimentary shipping on all orders over $500
+        Complimentary shipping on all orders over PKR 50,000
       </div>
 
       <div className="container mx-auto px-4">
@@ -222,7 +222,7 @@ export function Header() {
                           <div className="flex-1 min-w-0">
                             <p className="text-xs text-muted-foreground">{product.brand}</p>
                             <p className="text-sm font-medium truncate">{product.name}</p>
-                            <p className="text-sm">${product.price.toLocaleString()}</p>
+                            <p className="text-sm">PKR {product.price.toLocaleString()}</p>
                           </div>
                         </Link>
                       ))}

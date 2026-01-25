@@ -111,11 +111,11 @@ export function ProductCard({ product, className }: ProductCardProps) {
           </h3>
           <div className="flex items-center gap-2">
             <span className="font-medium">
-              ${product.price.toLocaleString()}
+              PKR {product.price.toLocaleString()}
             </span>
             {product.originalPrice && (
               <span className="text-muted-foreground line-through text-sm">
-                ${product.originalPrice.toLocaleString()}
+                PKR {product.originalPrice.toLocaleString()}
               </span>
             )}
           </div>
