@@ -36,8 +36,8 @@ export function Footer() {
               <h2 className="text-2xl font-serif tracking-widest uppercase mb-4">Marquise Vault</h2>
             </Link>
             <div className="flex gap-6 lg:justify-end text-primary-foreground/60">
-              <Link href="#" className="hover:text-accent transition-colors"><Instagram className="h-5 w-5" /></Link>
-              <Link href="#" className="hover:text-accent transition-colors"><Facebook className="h-5 w-5" /></Link>
+              <Link href="https://www.instagram.com/marquisevault?igsh=MXJoN2x6d2J5OTB4Zw==" target="_blank" className="hover:text-accent transition-colors"><Instagram className="h-5 w-5" /></Link>
+              <Link href="https://www.facebook.com/share/1AfJ5MSZZV/" target="_blank" className="hover:text-accent transition-colors"><Facebook className="h-5 w-5" /></Link>
               <Link href="#" className="hover:text-accent transition-colors"><Twitter className="h-5 w-5" /></Link>
               <Link href="#" className="hover:text-accent transition-colors"><Linkedin className="h-5 w-5" /></Link>
             </div>
@@ -100,10 +100,19 @@ export function Footer() {
                 <Link href="/contact" className="hover:text-accent transition-colors">Concierge Services</Link>
               </li>
               <li>
-                <Link href="/shipping" className="hover:text-accent transition-colors">Shipping & Returns</Link>
+                <span className="text-accent">0324 3499882</span>
+              </li>
+              <li>
+                <Link href="/return-exchange" className="hover:text-accent transition-colors">Return & Exchange</Link>
+              </li>
+              <li>
+                <Link href="/shipping" className="hover:text-accent transition-colors">Shipping Info</Link>
               </li>
               <li>
                 <Link href="/authenticity" className="hover:text-accent transition-colors">Authenticity Guarantee</Link>
+              </li>
+              <li>
+                <Link href="/blogs" className="hover:text-accent transition-colors">Blogs</Link>
               </li>
               <li>
                 <Link href="/faq" className="hover:text-accent transition-colors">FAQ</Link>

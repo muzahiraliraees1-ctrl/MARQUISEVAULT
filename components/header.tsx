@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useState, useRef, useEffect } from "react"
+import Image from "next/image"
 import { Search, ShoppingBag, User, Menu, X, LogIn, UserPlus } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -61,6 +62,20 @@ export function Header() {
                 >
                   New Arrivals
                 </Link>
+                <Link
+                  href="/contact"
+                  className="text-lg font-medium hover:text-accent transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact Us
+                </Link>
+                <Link
+                  href="/blogs"
+                  className="text-lg font-medium hover:text-accent transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Blogs
+                </Link>
                 <div>
                   <p className="text-sm text-muted-foreground mb-3">Brands</p>
                   {brands.map((brand) => (
@@ -93,7 +108,15 @@ export function Header() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="font-serif text-2xl tracking-wider">MARQUISE VAULT</span>
+            <div className="relative h-16 w-48">
+              <Image
+                src="/logo.png"
+                alt="MARQUISE VAULT"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -140,6 +163,12 @@ export function Header() {
                 </div>
               </div>
             </div>
+            <Link
+              href="/contact"
+              className="text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors"
+            >
+              Contact Us
+            </Link>
           </nav>
 
           {/* Actions */}

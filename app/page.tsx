@@ -48,7 +48,7 @@ export default function HomePage() {
         {/* Promotional Banner */}
         <section className="py-20 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">
           {/* Decorative background texture could go here */}
-          <div className="absolute inset-0 opacity-5 bg-[url('/noise.png')] mix-blend-overlay"></div>
+          <div className="absolute inset-0 opacity-5 mix-blend-overlay"></div>
 
           <div className="container mx-auto px-4 text-center relative z-10">
             <p className="text-accent text-sm uppercase tracking-[0.3em] mb-6">
