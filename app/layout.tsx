@@ -1,5 +1,6 @@
+"use client"
+
 import React from "react"
-import type { Metadata } from 'next'
 import { Playfair_Display, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { CartProvider } from "@/lib/cart-context"
@@ -10,31 +11,26 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { CartDrawer } from "@/components/cart-drawer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
+import { usePathname } from "next/navigation"
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: '--font-playfair' });
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
-export const metadata: Metadata = {
-  title: 'LUXE BAGS | Premium Designer Handbags & Purses',
-  description: 'Discover curated luxury handbags from the world\'s most prestigious brands. Shop authentic designer bags, purses, and accessories.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+function LayoutContent({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
+  const isAdminPage = pathname?.startsWith('/admin')
+
+  return (
+    <>
+      {!isAdminPage && <Header />}
+      <main className="min-h-screen">
+        {children}
+      </main>
+      {!isAdminPage && <Footer />}
+      {!isAdminPage && <CartDrawer />}
+      {!isAdminPage && <WhatsAppFloat />}
+    </>
+  )
 }
 
 export default function RootLayout({
@@ -47,13 +43,7 @@ export default function RootLayout({
       <body className={`${playfair.variable} ${inter.variable} font-sans antialiased`}>
         <AdminProvider>
           <CartProvider>
-            <Header />
-            <main className="min-h-screen">
-              {children}
-            </main>
-            <Footer />
-            <CartDrawer />
-            <WhatsAppFloat />
+            <LayoutContent>{children}</LayoutContent>
           </CartProvider>
         </AdminProvider>
         <Analytics />
