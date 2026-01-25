@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
+import Image from "next/image"
 import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react"
 
 export function Footer() {
@@ -33,7 +34,14 @@ export function Footer() {
 
           <div className="lg:text-right">
             <Link href="/" className="inline-block">
-              <h2 className="text-2xl font-serif tracking-widest uppercase mb-4">Marquise Vault</h2>
+              <div className="relative h-12 w-40 ml-auto lg:ml-auto">
+                <Image
+                  src="/logo.png"
+                  alt="Marquise Vault"
+                  fill
+                  className="object-contain object-right"
+                />
+              </div>
             </Link>
             <div className="flex gap-6 lg:justify-end text-primary-foreground/60">
               <Link href="https://www.instagram.com/marquisevault?igsh=MXJoN2x6d2J5OTB4Zw==" target="_blank" className="hover:text-accent transition-colors"><Instagram className="h-5 w-5" /></Link>

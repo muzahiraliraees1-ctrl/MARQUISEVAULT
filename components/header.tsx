@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
-import { Search, ShoppingBag, User, Menu, X, LogIn, UserPlus } from "lucide-react"
+import { Search, ShoppingBag, User, Menu, X, LogIn, UserPlus, Instagram, Facebook, Twitter, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useCart } from "@/lib/cart-context"
@@ -39,8 +39,31 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       {/* Announcement Bar */}
-      <div className="bg-primary text-primary-foreground text-center py-2 text-sm tracking-wide">
-        Complimentary shipping on all orders over PKR 50,000
+      <div className="bg-primary text-primary-foreground py-2 text-sm tracking-wide border-b border-primary-foreground/10">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
+          <div className="flex items-center gap-4 order-2 md:order-1">
+            <Link href="https://wa.me/923243499882" target="_blank" className="hover:text-accent transition-colors">
+              <MessageCircle className="h-4 w-4" />
+              <span className="sr-only">WhatsApp</span>
+            </Link>
+            <Link href="https://www.instagram.com/marquisevault?igsh=MXJoN2x6d2J5OTB4Zw==" target="_blank" className="hover:text-accent transition-colors">
+              <Instagram className="h-4 w-4" />
+              <span className="sr-only">Instagram</span>
+            </Link>
+            <Link href="https://www.facebook.com/share/1AfJ5MSZZV/" target="_blank" className="hover:text-accent transition-colors">
+              <Facebook className="h-4 w-4" />
+              <span className="sr-only">Facebook</span>
+            </Link>
+            <Link href="#" className="hover:text-accent transition-colors">
+              <Twitter className="h-4 w-4" />
+              <span className="sr-only">Twitter</span>
+            </Link>
+          </div>
+          <p className="font-medium order-1 md:order-2 text-center flex-1">
+            Complimentary shipping on all orders over PKR 50,000
+          </p>
+          <div className="w-[100px] hidden md:block order-3"></div>
+        </div>
       </div>
 
       <div className="container mx-auto px-4">
