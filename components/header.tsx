@@ -37,7 +37,7 @@ export function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-white">
       {/* Announcement Bar */}
       <div className="bg-primary text-primary-foreground py-2 text-sm tracking-wide border-b border-primary-foreground/10">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
@@ -62,7 +62,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-full sm:w-80 overflow-y-auto">
-              <nav className="flex flex-col gap-10 mt-12 pb-32 text-center items-center">
+              <nav className="flex flex-col gap-10 mt-12 pb-32 text-left items-start px-6">
                 <Link
                   href="/collections/new"
                   className="text-lg font-medium hover:text-accent transition-colors"
@@ -86,7 +86,7 @@ export function Header() {
                 </Link>
                 <div className="w-full">
                   <p className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">Brands</p>
-                  <div className="space-y-5 flex flex-col items-center">
+                  <div className="space-y-5 flex flex-col items-start w-full">
                     {brands.map((brand) => (
                       <Link
                         key={brand.id}
@@ -101,7 +101,7 @@ export function Header() {
                 </div>
                 <div className="w-full">
                   <p className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">Categories</p>
-                  <div className="space-y-5 flex flex-col items-center">
+                  <div className="space-y-5 flex flex-col items-start w-full">
                     {categories.slice(1).map((category) => (
                       <Link
                         key={category.slug}
@@ -119,16 +119,20 @@ export function Header() {
           </Sheet>
 
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="relative h-16 w-48">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2">
+            <div className="relative h-12 w-12 md:h-16 md:w-16 bg-white">
               <Image
-                src="/logo.png"
+                src="/brand-logo.jpg"
                 alt="MARQUISE VAULT"
                 fill
-                className="object-contain object-left"
+                className="object-contain"
                 priority
               />
             </div>
+            <span className="font-serif text-sm md:text-base tracking-[0.2em] font-bold text-primary">
+              MARQUISEVAULT
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
