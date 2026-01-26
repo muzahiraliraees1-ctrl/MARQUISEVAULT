@@ -22,7 +22,7 @@ export default function ContactPage() {
                             <div>
                                 <p className="font-medium mb-1">Phone & WhatsApp</p>
                                 <p className="text-muted-foreground">+92 324 3499882</p>
-                                <p className="text-xs text-muted-foreground mt-1">Available 9am - 6pm PKS</p>
+                                <p className="text-xs text-muted-foreground mt-1">Available 9am - 6pm PST</p>
                             </div>
                         </div>
 
