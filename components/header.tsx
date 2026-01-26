@@ -61,8 +61,8 @@ export function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-80 overflow-y-auto">
-              <nav className="flex flex-col gap-12 mt-12 pb-32">
+            <SheetContent side="left" className="w-full sm:w-80 overflow-y-auto">
+              <nav className="flex flex-col gap-10 mt-12 pb-32 text-center items-center">
                 <Link
                   href="/collections/new"
                   className="text-lg font-medium hover:text-accent transition-colors"
@@ -84,14 +84,14 @@ export function Header() {
                 >
                   Blogs
                 </Link>
-                <div>
+                <div className="w-full">
                   <p className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">Brands</p>
-                  <div className="space-y-5">
+                  <div className="space-y-5 flex flex-col items-center">
                     {brands.map((brand) => (
                       <Link
                         key={brand.id}
                         href={`/brands/${brand.id}`}
-                        className="block py-4 hover:bg-secondary rounded-md transition-colors text-xl"
+                        className="block py-4 hover:text-accent transition-colors text-xl w-full"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {brand.name}
@@ -99,14 +99,14 @@ export function Header() {
                     ))}
                   </div>
                 </div>
-                <div>
+                <div className="w-full">
                   <p className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">Categories</p>
-                  <div className="space-y-5">
+                  <div className="space-y-5 flex flex-col items-center">
                     {categories.slice(1).map((category) => (
                       <Link
                         key={category.slug}
                         href={`/collections/${category.slug}`}
-                        className="block py-4 hover:bg-secondary rounded-md transition-colors text-xl"
+                        className="block py-4 hover:text-accent transition-colors text-xl w-full"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {category.name}
