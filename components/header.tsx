@@ -61,8 +61,8 @@ export function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-80">
-              <nav className="flex flex-col gap-6 mt-8">
+            <SheetContent side="left" className="w-80 overflow-y-auto">
+              <nav className="flex flex-col gap-8 mt-8 pb-10">
                 <Link
                   href="/collections/new"
                   className="text-lg font-medium hover:text-accent transition-colors"
@@ -85,30 +85,34 @@ export function Header() {
                   Blogs
                 </Link>
                 <div>
-                  <p className="text-sm text-muted-foreground mb-3">Brands</p>
-                  {brands.map((brand) => (
-                    <Link
-                      key={brand.id}
-                      href={`/brands/${brand.id}`}
-                      className="block py-2 hover:text-accent transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {brand.name}
-                    </Link>
-                  ))}
+                  <p className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wider">Brands</p>
+                  <div className="space-y-1">
+                    {brands.map((brand) => (
+                      <Link
+                        key={brand.id}
+                        href={`/brands/${brand.id}`}
+                        className="block py-3 px-2 -mx-2 hover:bg-secondary rounded-md transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {brand.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground mb-3">Categories</p>
-                  {categories.slice(1).map((category) => (
-                    <Link
-                      key={category.slug}
-                      href={`/collections/${category.slug}`}
-                      className="block py-2 hover:text-accent transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
+                  <p className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wider">Categories</p>
+                  <div className="space-y-1">
+                    {categories.slice(1).map((category) => (
+                      <Link
+                        key={category.slug}
+                        href={`/collections/${category.slug}`}
+                        className="block py-3 px-2 -mx-2 hover:bg-secondary rounded-md transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {category.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </nav>
             </SheetContent>
