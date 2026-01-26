@@ -62,7 +62,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-80 overflow-y-auto">
-              <nav className="flex flex-col gap-8 mt-8 pb-10">
+              <nav className="flex flex-col gap-12 mt-12 pb-32">
                 <Link
                   href="/collections/new"
                   className="text-lg font-medium hover:text-accent transition-colors"
@@ -85,13 +85,13 @@ export function Header() {
                   Blogs
                 </Link>
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wider">Brands</p>
-                  <div className="space-y-1">
+                  <p className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">Brands</p>
+                  <div className="space-y-5">
                     {brands.map((brand) => (
                       <Link
                         key={brand.id}
                         href={`/brands/${brand.id}`}
-                        className="block py-3 px-2 -mx-2 hover:bg-secondary rounded-md transition-colors"
+                        className="block py-4 hover:bg-secondary rounded-md transition-colors text-xl"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {brand.name}
@@ -100,13 +100,13 @@ export function Header() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wider">Categories</p>
-                  <div className="space-y-1">
+                  <p className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">Categories</p>
+                  <div className="space-y-5">
                     {categories.slice(1).map((category) => (
                       <Link
                         key={category.slug}
                         href={`/collections/${category.slug}`}
-                        className="block py-3 px-2 -mx-2 hover:bg-secondary rounded-md transition-colors"
+                        className="block py-4 hover:bg-secondary rounded-md transition-colors text-xl"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {category.name}
