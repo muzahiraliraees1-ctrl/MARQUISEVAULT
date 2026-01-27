@@ -123,7 +123,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2">
             <div className="relative h-12 w-12 md:h-16 md:w-16 bg-white">
               <Image
-                src="/brand-logo.jpg"
+                src="/logo.png"
                 alt="MARQUISE VAULT"
                 fill
                 className="object-contain"
