@@ -114,7 +114,7 @@ export function Footer() {
                 <Link href="/contact" className="hover:text-accent transition-colors">Concierge Services</Link>
               </li>
               <li>
-                <span className="text-accent">+92 324 3499882</span>
+                <span className="text-accent">0345 2618575</span>
               </li>
               <li>
                 <Link href="/return-exchange" className="hover:text-accent transition-colors">Return & Exchange</Link>
