@@ -5,9 +5,7 @@ export default function ReturnExchangePage() {
         <div className="container mx-auto px-4 py-12 md:py-24">
             <div className="max-w-3xl mx-auto">
                 <h1 className="font-serif text-4xl md:text-5xl mb-6 text-center">Returns & Exchange</h1>
-                <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-                    Our commitment to your satisfaction. Please review our policies regarding returns and exchanges for your luxury purchases.
-                </p>
+                Our commitment to your satisfaction. Return and Exchange policy is available for your luxury purchases.
 
                 <div className="space-y-8">
                     <section>
@@ -17,7 +15,7 @@ export default function ReturnExchangePage() {
                                 At MARQUISE VAULT, we guarantee the authenticity and quality of every item we sell. Due to the nature of pre-loved luxury items and consignment, we operate on a strict return policy to protect both our buyers and consignors.
                             </p>
                             <p className="mb-4">
-                                <strong>All sales are final.</strong> We do not offer refunds or exchanges for change of mind. We strongly encourage you to review the item description, photos, and condition report carefully before making a purchase.
+                                <strong>Return and Exchange available.</strong> We offer returns and exchanges within 14 days of delivery for unworn items in their original condition. Please review the item description and photos carefully to ensure a perfect fit.
                             </p>
                         </div>
                     </section>

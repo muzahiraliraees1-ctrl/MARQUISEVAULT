@@ -254,7 +254,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                 <Truck className="h-5 w-5" />
               </div>
               <p className="text-xs font-medium uppercase tracking-wider">Free Shipping</p>
-              <p className="text-[10px] text-muted-foreground mt-1">On all orders</p>
+              <p className="text-[10px] text-muted-foreground mt-1">On orders above PKR 5,000</p>
             </div>
             <div className="text-center group cursor-default">
               <div className="w-12 h-12 rounded-full bg-secondary/40 flex items-center justify-center mx-auto mb-3 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
@@ -317,11 +317,12 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               <AccordionContent className="pb-6">
                 <div className="space-y-4 text-sm text-muted-foreground font-light">
                   <p>
-                    Complimentary express shipping on all orders. Your item will arrive in our signature packaging,
+                    Complimentary standard shipping on all orders over PKR 5,000. For orders below PKR 5,000, a standard
+                    delivery charge of PKR 200 applies. Your item will arrive in our signature packaging,
                     complete with a dust bag and authenticity card.
                   </p>
                   <p>
-                    Returns accepted within 14 days of delivery. Items must be
+                    Return and Exchange policy is available within 14 days of delivery. Items must be
                     unworn with all original tags and packaging intact.
                   </p>
                 </div>

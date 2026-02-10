@@ -27,7 +27,7 @@ export function CheckoutForm() {
   const [isProcessing, setIsProcessing] = useState(false)
   const [shippingMethod, setShippingMethod] = useState("standard")
 
-  const shippingCost = shippingMethod === "express" ? 2500 : total >= 50000 ? 0 : 1500
+  const shippingCost = shippingMethod === "express" ? 2500 : total >= 5000 ? 0 : 200
   const tax = total * 0.08
   const grandTotal = total + shippingCost + tax
 
@@ -181,9 +181,7 @@ export function CheckoutForm() {
                       </p>
                     </div>
                   </div>
-                  <span className="font-medium">
-                    {total >= 50000 ? "Free" : "PKR 1,500"}
-                  </span>
+                  {total >= 5000 ? "Free" : "PKR 200"}
                 </label>
                 <label className="flex items-center justify-between p-4 border border-border rounded-lg cursor-pointer hover:border-foreground transition-colors [&:has([data-state=checked])]:border-foreground mt-3">
                   <div className="flex items-center gap-3">
@@ -338,7 +336,7 @@ export function CheckoutForm() {
             <div className="mt-6 pt-6 border-t border-border space-y-3">
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Truck className="h-4 w-4" />
-                <span>Free shipping on orders over PKR 50,000</span>
+                <span>Free shipping on orders over PKR 5,000</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Shield className="h-4 w-4" />
