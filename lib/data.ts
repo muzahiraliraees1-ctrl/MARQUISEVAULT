@@ -600,7 +600,7 @@ export const heroSlides = [
     title: "New Season Arrivals",
     subtitle: "Discover the latest collections from the world's most prestigious houses",
     image: "/hero/hero-1.jpg",
-    cta: "Shop New In",
+    cta: "SHOP OUR COLLECTION",
     link: "/collections/new",
   },
   {
@@ -608,15 +608,15 @@ export const heroSlides = [
     title: "Timeless Classics",
     subtitle: "Investment pieces that transcend trends",
     image: "/hero/hero-2.jpg",
-    cta: "Explore Classics",
-    link: "/collections/classics",
+    cta: "EXPLORE COLLECTIONS",
+    link: "/collections/all",
   },
   {
     id: 3,
     title: "The Hermès Edit",
     subtitle: "Exceptional craftsmanship, extraordinary pieces",
     image: "/hero/hero-3.jpg",
-    cta: "Shop Hermès",
+    cta: "SHOP HERMÈS",
     link: "/brands/hermes",
   },
 ]

@@ -151,7 +151,7 @@ export default function SustainabilityPage() {
                                     Fashion that supports people, protects resources, and creates lasting impact.
                                 </p>
                                 <Button asChild variant="luxury" size="lg" className="mt-8">
-                                    <Link href="/collections">Explore Collections</Link>
+                                    <Link href="/collections/all">EXPLORE COLLECTIONS</Link>
                                 </Button>
                             </div>
                         </motion.div>

@@ -1,6 +1,8 @@
+"use client"
+
+import { motion } from "framer-motion"
+import Image from "next/image"
 import Link from "next/link"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 export default function BlogsPage() {
@@ -32,38 +34,60 @@ export default function BlogsPage() {
     ]
 
     return (
-        <div className="container mx-auto px-4 py-12 md:py-24">
-            <div className="max-w-6xl mx-auto">
-                <h1 className="font-serif text-4xl md:text-5xl mb-4 text-center">The Atelier Journal</h1>
-                <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-                    Insights, guides, and stories from the world of luxury handbags and investments.
-                </p>
+        <main className="bg-[#FBFAF8] min-h-screen py-24 md:py-32">
+            <div className="container mx-auto px-4 max-w-6xl">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="text-center mb-24"
+                >
+                    <p className="text-accent uppercase tracking-[0.4em] text-xs mb-4 font-semibold">The Journal</p>
+                    <h1 className="font-serif text-5xl md:text-7xl text-primary tracking-tight">The Atelier <span className="italic font-light">Insights</span></h1>
+                    <div className="h-px w-24 bg-primary/10 mx-auto mt-10" />
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {posts.map((post) => (
-                        <Card key={post.id} className="overflow-hidden border-border hover:shadow-lg transition-shadow">
-                            <div className="aspect-[4/3] relative overflow-hidden">
-                                <img
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    {posts.map((post, index) => (
+                        <motion.article
+                            key={post.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            className="group flex flex-col"
+                        >
+                            <div className="aspect-[4/5] relative overflow-hidden rounded-[2.5rem] shadow-xl mb-8">
+                                <Image
                                     src={post.image}
                                     alt={post.title}
-                                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
                                 />
-                            </div>
-                            <CardContent className="p-6">
-                                <div className="flex items-center justify-between mb-4">
-                                    <span className="text-xs font-medium uppercase tracking-wider text-accent">{post.category}</span>
-                                    <span className="text-xs text-muted-foreground">{post.date}</span>
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
+                                <div className="absolute top-6 left-6 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-bold uppercase tracking-widest text-primary">
+                                    {post.category}
                                 </div>
-                                <h3 className="font-serif text-xl mb-3 line-clamp-2">{post.title}</h3>
-                                <p className="text-sm text-muted-foreground mb-6 line-clamp-3">{post.excerpt}</p>
-                                <Link href={`#`} className="inline-flex items-center text-sm font-medium hover:text-accent transition-colors">
-                                    Read Article <ArrowRight className="ml-2 h-4 w-4" />
+                            </div>
+                            <div className="space-y-4 px-2">
+                                <p className="text-secondary text-xs uppercase tracking-widest">{post.date}</p>
+                                <h3 className="font-serif text-2xl text-primary leading-tight group-hover:text-accent transition-colors duration-300">
+                                    {post.title}
+                                </h3>
+                                <p className="text-muted-foreground font-light text-sm leading-relaxed line-clamp-3">
+                                    {post.excerpt}
+                                </p>
+                                <Link
+                                    href={`#`}
+                                    className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary hover:text-accent transition-colors pt-4"
+                                >
+                                    Experience Article <ArrowRight className="ml-2 w-4 h-4" />
                                 </Link>
-                            </CardContent>
-                        </Card>
+                            </div>
+                        </motion.article>
                     ))}
                 </div>
             </div>
-        </div>
+        </main>
     )
 }

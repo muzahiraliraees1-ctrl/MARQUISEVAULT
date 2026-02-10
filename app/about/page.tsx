@@ -167,7 +167,7 @@ export default function AboutPage() {
                                 This is not the end of my story — it is only the beginning.
                             </p>
                             <Button asChild variant="luxury" size="lg">
-                                <Link href="/collections">Shop Our Collection</Link>
+                                <Link href="/collections/all">SHOP OUR COLLECTION</Link>
                             </Button>
                         </motion.div>
                     </motion.div>
