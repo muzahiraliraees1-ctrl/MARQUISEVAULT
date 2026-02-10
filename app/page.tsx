@@ -2,9 +2,9 @@
 
 import { HeroCarousel } from "@/components/hero-carousel"
 import { FeaturedProducts } from "@/components/featured-products"
-import { BrandShowcase } from "@/components/brand-showcase"
 import { NewArrivals } from "@/components/new-arrivals"
 import { HeritageSection } from "@/components/heritage-section"
+import { LuxuryExperience } from "@/components/luxury-experience"
 import { motion } from "framer-motion"
 
 export default function HomePage() {
@@ -34,7 +34,7 @@ export default function HomePage() {
         viewport={{ once: true }}
         transition={{ delay: 0.2, duration: 0.8 }}
       >
-        <BrandShowcase />
+        <LuxuryExperience />
       </motion.div>
 
       <NewArrivals />
