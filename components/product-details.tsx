@@ -36,6 +36,8 @@ export function ProductDetails({ product }: ProductDetailsProps) {
   const { addItem } = useCart()
   const [selectedImage, setSelectedImage] = useState(0)
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
+
+  const currentImages = product.colorImages?.[selectedColor] || product.images
   const [isAdded, setIsAdded] = useState(false)
 
   // Personalization State
@@ -71,7 +73,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
         <div className="space-y-6">
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-secondary/20 group cursor-crosshair">
             <Image
-              src={product.images[selectedImage] || "/placeholder.svg"}
+              src={currentImages[selectedImage] || "/placeholder.svg"}
               alt={product.name}
               fill
               className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-150"
@@ -100,7 +102,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           </div>
 
           <div className="flex gap-4 overflow-x-auto pb-2">
-            {product.images.map((image, index) => (
+            {currentImages.map((image, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedImage(index)}
@@ -173,7 +175,10 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               {product.colors.map((color) => (
                 <button
                   key={color}
-                  onClick={() => setSelectedColor(color)}
+                  onClick={() => {
+                    setSelectedColor(color)
+                    setSelectedImage(0)
+                  }}
                   className={cn(
                     "px-6 py-2.5 text-sm border rounded-sm transition-all duration-300 min-w-[3rem]",
                     selectedColor === color

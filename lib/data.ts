@@ -14,6 +14,7 @@ export interface Product {
   isNew?: boolean
   isFeatured?: boolean
   occasion?: string
+  colorImages?: Record<string, string[]>
 }
 
 export interface Brand {
@@ -184,6 +185,19 @@ export const products: Product[] = [
       "/products/elara-tote-removebg-6.png",
       "/products/elara-tote-removebg-7.png"
     ],
+    colorImages: {
+      "Brown": [
+        "/products/elara-tote-removebg-1.png",
+        "/products/elara-tote-removebg-6.png",
+        "/products/elara-tote-removebg-7.png"
+      ],
+      "Black": [
+        "/products/elara-tote-removebg-2.png",
+        "/products/elara-tote-removebg-3.png",
+        "/products/elara-tote-removebg-4.png",
+        "/products/elara-tote-removebg-5.png"
+      ]
+    },
     category: "Totes",
     description: "Sophisticated and versatile tote bag designed for the modern professional. Features secure magnetic closure, adjustable handle for comfortable carry, premium stainless-steel hardware, and multiple organizational compartments. Crafted from high-quality PU leather.",
     details: [
@@ -383,6 +397,19 @@ export const products: Product[] = [
       "/products/elara-tote-removebg-6.png",
       "/products/elara-tote-removebg-7.png"
     ],
+    colorImages: {
+      "Brown": [
+        "/products/elara-tote-removebg-1.png",
+        "/products/elara-tote-removebg-6.png",
+        "/products/elara-tote-removebg-7.png"
+      ],
+      "Black": [
+        "/products/elara-tote-removebg-2.png",
+        "/products/elara-tote-removebg-3.png",
+        "/products/elara-tote-removebg-4.png",
+        "/products/elara-tote-removebg-5.png"
+      ]
+    },
     category: "Totes",
     description: "Sophisticated and versatile tote bag designed for the modern professional. Features secure magnetic closure, adjustable handle for comfortable carry, premium stainless-steel hardware, and multiple organizational compartments. Crafted from high-quality PU leather.",
     details: [
