@@ -25,21 +25,35 @@ export function CheckoutForm() {
   const router = useRouter()
   const { items, total, clearCart } = useCart()
   const [isProcessing, setIsProcessing] = useState(false)
-  const [shippingMethod, setShippingMethod] = useState("standard")
-
-  const shippingCost = shippingMethod === "express" ? 2500 : total >= 5000 ? 0 : 200
-  const tax = total * 0.08
-  const grandTotal = total + shippingCost + tax
+  // const [shippingMethod, setShippingMethod] = useState("standard")
+  const shippingCost = total >= 5000 ? 0 : 200
+  const tax = 0
+  const grandTotal = total + shippingCost
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsProcessing(true)
 
-    // Simulate processing
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    // Form data extraction (simulated/simple for now)
+    const formData = new FormData(e.target as HTMLFormElement)
+    const orderDetails = items.map(item => `${item.product.name} (${item.color}) x${item.quantity}`).join('\n')
+    const address = `${formData.get('address')}, ${formData.get('city')}, ${formData.get('state')}`
+    const phone = formData.get('phone')
 
-    clearCart()
-    router.push("/checkout/success")
+    const message = `*New Order Inquiry*\n\n` +
+      `*Items:*\n${orderDetails}\n\n` +
+      `*Total:* PKR ${grandTotal.toLocaleString()}\n` +
+      `*Phone:* ${phone}\n` +
+      `*Address:* ${address}\n\n` +
+      `Please confirm my order.`
+
+    const whatsappUrl = `https://wa.me/923452618575?text=${encodeURIComponent(message)}`
+
+    window.open(whatsappUrl, '_blank')
+
+    setIsProcessing(false)
+    // We don't clear cart immediately here to let user confirm first, or we can clear if they want.
+    // clearCart()
   }
 
   if (items.length === 0) {
@@ -77,21 +91,23 @@ export function CheckoutForm() {
               <h2 className="font-medium text-lg mb-4">Contact Information</h2>
               <div className="space-y-4">
                 <div>
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email">Email (optional)</Label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="your@email.com"
-                    required
                     className="mt-1.5"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="phone">Phone (optional)</Label>
+                  <Label htmlFor="phone">Phone Number</Label>
                   <Input
                     id="phone"
+                    name="phone"
                     type="tel"
                     placeholder="03xx-xxxxxxx"
+                    required
                     className="mt-1.5"
                   />
                 </div>
@@ -105,17 +121,18 @@ export function CheckoutForm() {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" required className="mt-1.5" />
+                    <Input id="firstName" name="firstName" required className="mt-1.5" />
                   </div>
                   <div>
                     <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" required className="mt-1.5" />
+                    <Input id="lastName" name="lastName" required className="mt-1.5" />
                   </div>
                 </div>
                 <div>
                   <Label htmlFor="address">Address</Label>
                   <Input
                     id="address"
+                    name="address"
                     placeholder="Street address"
                     required
                     className="mt-1.5"
@@ -123,16 +140,16 @@ export function CheckoutForm() {
                 </div>
                 <div>
                   <Label htmlFor="apartment">Apartment, suite, etc. (optional)</Label>
-                  <Input id="apartment" className="mt-1.5" />
+                  <Input id="apartment" name="apartment" className="mt-1.5" />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="city">City</Label>
-                    <Input id="city" required className="mt-1.5" />
+                    <Input id="city" name="city" required className="mt-1.5" />
                   </div>
                   <div>
                     <Label htmlFor="state">State</Label>
-                    <Select required>
+                    <Select name="state" required>
                       <SelectTrigger className="mt-1.5">
                         <SelectValue placeholder="Select state" />
                       </SelectTrigger>
@@ -151,7 +168,7 @@ export function CheckoutForm() {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="zip">Postal Code</Label>
-                    <Input id="zip" required className="mt-1.5" />
+                    <Input id="zip" name="zip" required className="mt-1.5" />
                   </div>
                   <div>
                     <Label htmlFor="country">Country</Label>
@@ -170,77 +187,23 @@ export function CheckoutForm() {
 
             {/* Shipping Method */}
             <div className="bg-card border border-border rounded-lg p-6">
-              <h2 className="font-medium text-lg mb-4">Shipping Method</h2>
-              <RadioGroup value={shippingMethod} onValueChange={setShippingMethod}>
-                <label className="flex items-center justify-between p-4 border border-border rounded-lg cursor-pointer hover:border-foreground transition-colors [&:has([data-state=checked])]:border-foreground">
-                  <div className="flex items-center gap-3">
-                    <RadioGroupItem value="standard" id="standard" />
-                    <div>
-                      <p className="font-medium">Standard Shipping</p>
-                      <p className="text-sm text-muted-foreground">
-                        5-7 business days
-                      </p>
-                    </div>
-                  </div>
-                  {total >= 5000 ? "Free" : "PKR 200"}
-                </label>
-                <label className="flex items-center justify-between p-4 border border-border rounded-lg cursor-pointer hover:border-foreground transition-colors [&:has([data-state=checked])]:border-foreground mt-3">
-                  <div className="flex items-center gap-3">
-                    <RadioGroupItem value="express" id="express" />
-                    <div>
-                      <p className="font-medium">Express Shipping</p>
-                      <p className="text-sm text-muted-foreground">
-                        2-3 business days
-                      </p>
-                    </div>
-                  </div>
-                  <span className="font-medium">PKR 2,500</span>
-                </label>
-              </RadioGroup>
-            </div>
-
-            {/* Payment */}
-            <div className="bg-card border border-border rounded-lg p-6">
-              <h2 className="font-medium text-lg mb-4">Payment</h2>
-              <div className="space-y-4">
-                <div>
-                  <Label htmlFor="cardNumber">Card Number</Label>
-                  <div className="relative mt-1.5">
-                    <Input
-                      id="cardNumber"
-                      placeholder="1234 5678 9012 3456"
-                      required
-                      className="pr-12"
-                    />
-                    <CreditCard className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="expiry">Expiration</Label>
-                    <Input
-                      id="expiry"
-                      placeholder="MM / YY"
-                      required
-                      className="mt-1.5"
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="cvv">CVV</Label>
-                    <Input
-                      id="cvv"
-                      placeholder="123"
-                      required
-                      className="mt-1.5"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <Label htmlFor="cardName">Name on Card</Label>
-                  <Input id="cardName" required className="mt-1.5" />
+              <h2 className="font-medium text-lg mb-4">Shipping & Payment</h2>
+              <div className="p-4 border border-border rounded-lg bg-secondary/30">
+                <div className="flex flex-col gap-2">
+                  <p className="font-medium flex items-center gap-2">
+                    <Truck className="h-4 w-4" />
+                    Cash on Delivery
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Standard Shipping: 5-7 business days
+                  </p>
+                  <p className="text-sm font-medium">
+                    {total >= 5000 ? "Shipping: FREE" : "Shipping Cost: PKR 200"}
+                  </p>
                 </div>
               </div>
             </div>
+
 
             <Button
               type="submit"
@@ -249,17 +212,17 @@ export function CheckoutForm() {
               disabled={isProcessing}
             >
               {isProcessing ? (
-                "Processing..."
+                "Redirecting to WhatsApp..."
               ) : (
                 <>
-                  Pay PKR {grandTotal}
+                  Confirm your order on WhatsApp
                 </>
               )}
             </Button>
 
             <p className="text-sm text-muted-foreground text-center flex items-center justify-center gap-2">
               <Shield className="h-4 w-4" />
-              Your payment information is encrypted and secure
+              100% Quality Assurance & Secure Packaging
             </p>
           </form>
         </div>
@@ -314,12 +277,8 @@ export function CheckoutForm() {
                 <span>
                   {shippingCost === 0
                     ? "Free"
-                    : `PKR ${shippingCost.toFixed(2)}`}
+                    : `PKR ${shippingCost}`}
                 </span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Estimated Tax</span>
-                <span>PKR {tax.toFixed(2)}</span>
               </div>
             </div>
 
