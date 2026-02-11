@@ -174,8 +174,13 @@ export const products: Product[] = [
     brand: "MARQUISE VAULT",
     price: 3899,
     originalPrice: 6000,
-    image: "/products/elara-tote-new.png",
-    images: ["/products/elara-tote-new.png"],
+    image: "/products/elara-tote-1.png",
+    images: [
+      "/products/elara-tote-1.png",
+      "/products/elara-tote-2.png",
+      "/products/elara-tote-3.png",
+      "/products/elara-tote-4.png"
+    ],
     category: "Totes",
     description: "Sophisticated and versatile tote bag designed for the modern professional. Features secure magnetic closure, adjustable handle for comfortable carry, premium stainless-steel hardware, and multiple organizational compartments. Crafted from high-quality PU leather.",
     details: [
@@ -199,8 +204,13 @@ export const products: Product[] = [
     brand: "MARQUISE VAULT",
     price: 4299,
     originalPrice: 6500,
-    image: "/products/sleek-tote-new.png",
-    images: ["/products/sleek-tote-new.png"],
+    image: "/products/sleek-tote-1.png",
+    images: [
+      "/products/sleek-tote-1.png",
+      "/products/sleek-tote-2.png",
+      "/products/sleek-tote-3.png",
+      "/products/sleek-tote-4.png"
+    ],
     category: "Totes",
     description: "A sleek and functional tote bag designed for the modern professional. Features a secure zip closure, two compartments with magnetic closures, and premium stainless-steel hardware. Crafted from high-quality PU leather for a sophisticated look.",
     details: [
@@ -359,8 +369,13 @@ export const products: Product[] = [
     brand: "MARQUISE VAULT",
     price: 3899,
     originalPrice: 6000,
-    image: "/products/local-10.png",
-    images: ["/products/local-10.png", "/products/sleek-tote-2.png"],
+    image: "/products/elara-tote-1.png",
+    images: [
+      "/products/elara-tote-1.png",
+      "/products/elara-tote-2.png",
+      "/products/elara-tote-3.png",
+      "/products/elara-tote-4.png"
+    ],
     category: "Totes",
     description: "Sophisticated and versatile tote bag designed for the modern professional. Features secure magnetic closure, adjustable handle for comfortable carry, premium stainless-steel hardware, and multiple organizational compartments. Crafted from high-quality PU leather.",
     details: [

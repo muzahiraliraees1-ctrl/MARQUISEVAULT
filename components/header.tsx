@@ -83,11 +83,18 @@ export function Header() {
             <SheetContent side="left" className="w-full sm:w-80 overflow-y-auto">
               <nav className="flex flex-col gap-10 mt-12 pb-32 text-left items-start px-6">
                 <Link
-                  href="/collections/new"
+                  href="/product/mv-5"
                   className="text-lg font-medium hover:text-accent transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  New Arrivals
+                  ELARA TOTE BAG
+                </Link>
+                <Link
+                  href="/product/mv-6"
+                  className="text-lg font-medium hover:text-accent transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  SLEEK TOTE BAG
                 </Link>
                 <Link
                   href="/contact"
@@ -104,22 +111,7 @@ export function Header() {
                   Blogs
                 </Link>
                 <div className="w-full">
-                  <p className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">Brands</p>
-                  <div className="space-y-5 flex flex-col items-start w-full">
-                    {brands.map((brand) => (
-                      <Link
-                        key={brand.id}
-                        href={`/brands/${brand.id}`}
-                        className="block py-4 hover:text-accent transition-colors text-xl w-full"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {brand.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-                <div className="w-full">
-                  <p className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">Categories</p>
+                  <p className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">Collections</p>
                   <div className="space-y-5 flex flex-col items-start w-full">
                     {categories.slice(1).map((category) => (
                       <Link
@@ -157,29 +149,17 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              href="/collections/new"
+              href="/product/mv-5"
               className="text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors"
             >
-              New Arrivals
+              ELARA TOTE BAG
             </Link>
-            <div className="relative group">
-              <button className="text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors">
-                Brands
-              </button>
-              <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="bg-card border border-border rounded-lg shadow-lg p-4 min-w-[200px]">
-                  {brands.map((brand) => (
-                    <Link
-                      key={brand.id}
-                      href={`/brands/${brand.id}`}
-                      className="block py-2 px-3 text-sm hover:bg-secondary rounded-md transition-colors"
-                    >
-                      {brand.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <Link
+              href="/product/mv-6"
+              className="text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors"
+            >
+              SLEEK TOTE BAG
+            </Link>
             <div className="relative group">
               <button className="text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors">
                 Collections
