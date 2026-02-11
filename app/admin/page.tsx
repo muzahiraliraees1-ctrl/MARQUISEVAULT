@@ -103,9 +103,7 @@ const orderStatusData = [
 
 // Top performing brands
 const brandPerformance = [
-  { name: "Hermès", sales: 85000 },
   { name: "CHANEL", sales: 72000 },
-  { name: "Louis Vuitton", sales: 65000 },
   { name: "DIOR", sales: 48000 },
   { name: "GUCCI", sales: 42000 },
 ]

@@ -48,32 +48,6 @@ const orders = [
     shipping: "Express",
   },
   {
-    id: "ORD-002",
-    customer: {
-      name: "James Chen",
-      email: "james@example.com",
-      address: "456 Oak St, Los Angeles, CA 90001",
-    },
-    items: [{ name: "Neverfull MM", brand: "Louis Vuitton", price: 2030, qty: 1 }],
-    total: 2030,
-    status: "processing",
-    date: "2026-01-19",
-    shipping: "Standard",
-  },
-  {
-    id: "ORD-003",
-    customer: {
-      name: "Sofia Rodriguez",
-      email: "sofia@example.com",
-      address: "789 Maple Dr, Miami, FL 33101",
-    },
-    items: [{ name: "Birkin 30", brand: "Hermès", price: 12500, qty: 1 }],
-    total: 12500,
-    status: "delivered",
-    date: "2026-01-18",
-    shipping: "Express",
-  },
-  {
     id: "ORD-004",
     customer: {
       name: "Oliver Smith",
@@ -82,9 +56,8 @@ const orders = [
     },
     items: [
       { name: "GG Marmont Small", brand: "GUCCI", price: 2350, qty: 1 },
-      { name: "Re-Edition 2005", brand: "PRADA", price: 1850, qty: 1 },
     ],
-    total: 4200,
+    total: 2350,
     status: "pending",
     date: "2026-01-21",
     shipping: "Standard",

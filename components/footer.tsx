@@ -87,9 +87,6 @@ export function Footer() {
                 <Link href="/collections/new" className="hover:text-accent transition-colors">New Arrivals</Link>
               </li>
               <li>
-                <Link href="/brands/hermes" className="hover:text-accent transition-colors">Maison Hermès</Link>
-              </li>
-              <li>
                 <Link href="/brands/chanel" className="hover:text-accent transition-colors">House of Chanel</Link>
               </li>
               <li>
