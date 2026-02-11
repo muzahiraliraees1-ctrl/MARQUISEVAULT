@@ -273,9 +273,16 @@ export function CheckoutForm() {
                       {item.color}
                     </p>
                   </div>
-                  <p className="font-medium">
-                    PKR {item.product.price * item.quantity}
-                  </p>
+                  <div className="text-right flex flex-col items-end">
+                    <p className="font-medium">
+                      PKR {(item.product.price * item.quantity).toLocaleString()}
+                    </p>
+                    {item.product.originalPrice && (
+                      <p className="text-xs text-red-500 line-through">
+                        PKR {(item.product.originalPrice * item.quantity).toLocaleString()}
+                      </p>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

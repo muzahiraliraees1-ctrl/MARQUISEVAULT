@@ -172,7 +172,7 @@ export const products: Product[] = [
     id: "mv-5",
     name: "ELARA TOTE BAG",
     brand: "MARQUISE VAULT",
-    price: 3899,
+    price: 3900,
     originalPrice: 6000,
     image: "/products/elara-tote-removebg-1.png",
     images: [
@@ -205,14 +205,15 @@ export const products: Product[] = [
     id: "mv-6",
     name: "SLEEK TOTE BAG",
     brand: "MARQUISE VAULT",
-    price: 4299,
+    price: 4225,
     originalPrice: 6500,
     image: "/products/sleek-tote-1.png",
     images: [
       "/products/sleek-tote-1.png",
       "/products/sleek-tote-2.png",
       "/products/sleek-tote-3.png",
-      "/products/sleek-tote-4.png"
+      "/products/sleek-tote-4.png",
+      "/products/sleek-tote-removebg-5.png"
     ],
     category: "Totes",
     description: "A sleek and functional tote bag designed for the modern professional. Features a secure zip closure, two compartments with magnetic closures, and premium stainless-steel hardware. Crafted from high-quality PU leather for a sophisticated look.",
@@ -370,7 +371,7 @@ export const products: Product[] = [
     id: "mv-new-5",
     name: "ELARA TOTE BAG",
     brand: "MARQUISE VAULT",
-    price: 3899,
+    price: 3900,
     originalPrice: 6000,
     image: "/products/elara-tote-removebg-1.png",
     images: [
