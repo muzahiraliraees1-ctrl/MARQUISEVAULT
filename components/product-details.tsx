@@ -78,7 +78,12 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               style={{ transformOrigin: "center center" }} // Simple center zoom, could be improved with mouse tracking
               priority
             />
-            {product.isNew && (
+            {product.originalPrice && (
+              <span className="absolute top-4 left-4 bg-destructive text-card text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-sm">
+                35% OFF
+              </span>
+            )}
+            {product.isNew && !product.originalPrice && (
               <span className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs uppercase tracking-wider px-3 py-1.5 rounded-sm">
                 New Arrival
               </span>

@@ -55,8 +55,8 @@ export function ProductCard({ product, className }: ProductCardProps) {
               </span>
             )}
             {product.originalPrice && (
-              <span className="bg-destructive text-card text-xs uppercase tracking-wider px-3 py-1 rounded-sm">
-                Sale
+              <span className="bg-destructive text-card text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-sm">
+                35% OFF
               </span>
             )}
           </div>
