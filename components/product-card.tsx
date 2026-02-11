@@ -114,7 +114,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
               PKR {product.price}
             </span>
             {product.originalPrice && (
-              <span className="text-foreground/60 line-through text-sm">
+              <span className="text-red-500 line-through text-sm">
                 PKR {product.originalPrice}
               </span>
             )}

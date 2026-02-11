@@ -134,7 +134,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               PKR {product.price}
             </span>
             {product.originalPrice && (
-              <span className="text-xl text-foreground/60 line-through decoration-1">
+              <span className="text-xl text-red-500 line-through decoration-1">
                 PKR {product.originalPrice}
               </span>
             )}
