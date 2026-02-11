@@ -34,17 +34,34 @@ export function CheckoutForm() {
     e.preventDefault()
     setIsProcessing(true)
 
-    // Form data extraction (simulated/simple for now)
     const formData = new FormData(e.target as HTMLFormElement)
-    const orderDetails = items.map(item => `${item.product.name} (${item.color}) x${item.quantity}`).join('\n')
-    const address = `${formData.get('address')}, ${formData.get('city')}, ${formData.get('state')}`
+    const firstName = formData.get('firstName')
+    const lastName = formData.get('lastName')
+    const email = formData.get('email') || 'Not provided'
     const phone = formData.get('phone')
+    const address = formData.get('address')
+    const apartment = formData.get('apartment') ? ` (${formData.get('apartment')})` : ''
+    const city = formData.get('city')
+    const state = formData.get('state')
+    const zip = formData.get('zip')
 
-    const message = `*New Order Inquiry*\n\n` +
-      `*Items:*\n${orderDetails}\n\n` +
-      `*Total:* PKR ${grandTotal.toLocaleString()}\n` +
-      `*Phone:* ${phone}\n` +
-      `*Address:* ${address}\n\n` +
+    const orderDetails = items.map(item => `- ${item.product.name} (${item.color}) x${item.quantity}`).join('\n')
+
+    const message = `*NEW ORDER INQUIRY - MARQUISE VAULT*\n\n` +
+      `*CUSTOMER DETAILS*\n` +
+      `Name: ${firstName} ${lastName}\n` +
+      `Phone: ${phone}\n` +
+      `Email: ${email}\n\n` +
+      `*SHIPPING ADDRESS*\n` +
+      `${address}${apartment}\n` +
+      `${city}, ${state} ${zip}\n` +
+      `Pakistan\n\n` +
+      `*ORDER SUMMARY*\n` +
+      `${orderDetails}\n\n` +
+      `*Subtotal:* PKR ${total.toLocaleString()}\n` +
+      `*Shipping:* ${shippingCost === 0 ? 'FREE' : 'PKR ' + shippingCost.toLocaleString()}\n` +
+      `*GRAND TOTAL:* PKR ${grandTotal.toLocaleString()}\n\n` +
+      `*Payment Method:* Cash on Delivery\n\n` +
       `Please confirm my order.`
 
     const whatsappUrl = `https://wa.me/923452618575?text=${encodeURIComponent(message)}`
@@ -52,8 +69,6 @@ export function CheckoutForm() {
     window.open(whatsappUrl, '_blank')
 
     setIsProcessing(false)
-    // We don't clear cart immediately here to let user confirm first, or we can clear if they want.
-    // clearCart()
   }
 
   if (items.length === 0) {
