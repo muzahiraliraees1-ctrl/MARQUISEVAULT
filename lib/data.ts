@@ -207,7 +207,7 @@ export const products: Product[] = [
     brand: "MARQUISE VAULT",
     price: 4225,
     originalPrice: 6500,
-    image: "/products/sleek-tote-1.png",
+    image: "/products/sleek-tote-removebg-5.png",
     images: [
       "/products/sleek-tote-1.png",
       "/products/sleek-tote-2.png",
