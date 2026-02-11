@@ -21,7 +21,7 @@ export default function ContactPage() {
                             <Phone className="h-5 w-5 mt-1 text-primary" />
                             <div>
                                 <p className="font-medium mb-1">Phone & WhatsApp</p>
-                                <p className="text-muted-foreground">0345 2618575</p>
+                                <p className="text-muted-foreground">0329 8239335</p>
                                 <p className="text-xs text-muted-foreground mt-1">Available 9am - 6pm PST</p>
                             </div>
                         </div>

@@ -34,7 +34,7 @@ export function Footer() {
 
           <div className="lg:text-right">
             <div className="flex gap-6 lg:justify-end text-primary-foreground/60">
-              <Link href="https://wa.me/923243499882" target="_blank" className="hover:opacity-80 transition-opacity">
+              <Link href="https://wa.me/923298239335" target="_blank" className="hover:opacity-80 transition-opacity">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" className="h-5 w-5">
                   <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2M12.05 19.81c-1.41 0-2.79-.38-4-1.1l-.29-.17-2.97.78.79-2.89-.19-.3c-.79-1.25-1.21-2.7-1.21-4.22 0-4.38 3.56-7.94 7.94-7.94 2.12 0 4.11.83 5.61 2.33 1.5 1.5 2.33 3.49 2.33 5.61.01 4.38-3.55 7.9-8.01 7.9M16.39 14.24c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.63.78-.77.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.1-.1.24-.26.36-.39.12-.13.16-.22.24-.37.08-.15.04-.28-.02-.39-.06-.11-.54-1.29-.74-1.77-.19-.46-.39-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02s.87 2.34 1 2.67c.12.33 1.71 2.61 4.15 3.66 1.63.7 2.27.75 3.06.63.88-.13 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28" />
                 </svg>
@@ -105,7 +105,7 @@ export function Footer() {
                 <Link href="/contact" className="hover:text-accent transition-colors">Concierge Services</Link>
               </li>
               <li>
-                <span className="text-accent">0345 2618575</span>
+                <span className="text-accent">0329 8239335</span>
               </li>
               <li>
                 <Link href="/return-exchange" className="hover:text-accent transition-colors">Return & Exchange</Link>
