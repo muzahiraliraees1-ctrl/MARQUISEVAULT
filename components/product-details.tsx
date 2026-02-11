@@ -131,11 +131,11 @@ export function ProductDetails({ product }: ProductDetailsProps) {
 
           <div className="flex items-baseline gap-4">
             <span className="text-3xl font-light text-primary">
-              PKR {product.price.toLocaleString()}
+              PKR {product.price}
             </span>
             {product.originalPrice && (
               <span className="text-xl text-muted-foreground line-through decoration-1 opacity-70">
-                PKR {product.originalPrice.toLocaleString()}
+                PKR {product.originalPrice}
               </span>
             )}
           </div>
@@ -187,7 +187,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
             <div className="flex items-center justify-between">
               <div className="space-y-0.5">
                 <Label htmlFor="monogram" className="text-base font-medium">Personalization</Label>
-                <p className="text-xs text-muted-foreground">Add your initials (Optional +PKR 5,000)</p>
+                <p className="text-xs text-muted-foreground">Add your initials (Optional +PKR 5000)</p>
               </div>
               <Switch
                 id="monogram"
@@ -254,7 +254,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                 <Truck className="h-5 w-5" />
               </div>
               <p className="text-xs font-medium uppercase tracking-wider">Free Shipping</p>
-              <p className="text-[10px] text-muted-foreground mt-1">On orders above PKR 5,000</p>
+              <p className="text-[10px] text-muted-foreground mt-1">On orders above PKR 5000</p>
             </div>
             <div className="text-center group cursor-default">
               <div className="w-12 h-12 rounded-full bg-secondary/40 flex items-center justify-center mx-auto mb-3 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
@@ -317,7 +317,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               <AccordionContent className="pb-6">
                 <div className="space-y-4 text-sm text-muted-foreground font-light">
                   <p>
-                    Complimentary standard shipping on all orders over PKR 5,000. For orders below PKR 5,000, a standard
+                    Complimentary standard shipping on all orders over PKR 5000. For orders below PKR 5000, a standard
                     delivery charge of PKR 200 applies. Your item will arrive in our signature packaging,
                     complete with a dust bag and authenticity card.
                   </p>

@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useState, useRef, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { Search, ShoppingBag, User, Menu, X, LogIn, UserPlus } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -15,6 +16,19 @@ export function Header() {
   const [searchOpen, setSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState("")
   const searchRef = useRef<HTMLDivElement>(null)
+
+  const announcements = [
+    "Orders Above 5000: FREE Delivery",
+    "Standard Delivery Charges: PKR 200"
+  ]
+  const [announcementIndex, setAnnouncementIndex] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setAnnouncementIndex((prev) => (prev + 1) % announcements.length)
+    }, 4000)
+    return () => clearInterval(timer)
+  }, [])
 
   // Filter products based on search query
   const searchResults = searchQuery.trim()
@@ -39,15 +53,20 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-white">
       {/* Announcement Bar */}
-      <div className="bg-primary text-primary-foreground py-2 text-sm tracking-wide border-b border-primary-foreground/10">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
-          <div className="flex items-center gap-4 order-2 md:order-1">
-            <span className="text-xs text-primary-foreground/50 hidden md:inline">Follow us</span>
-          </div>
-          <p className="font-medium order-1 md:order-2 text-center flex-1">
-            Complimentary shipping on all orders over PKR 50,000
-          </p>
-          <div className="w-[100px] hidden md:block order-3"></div>
+      <div className="bg-primary text-primary-foreground py-2 text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold border-b border-primary-foreground/10 h-10 flex items-center overflow-hidden">
+        <div className="container mx-auto px-4 relative flex justify-center items-center h-full">
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={announcementIndex}
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -20, opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="text-center absolute w-full"
+            >
+              {announcements[announcementIndex]}
+            </motion.p>
+          </AnimatePresence>
         </div>
       </div>
 

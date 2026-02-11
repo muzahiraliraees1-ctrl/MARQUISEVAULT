@@ -37,7 +37,7 @@ export default function HomePage() {
         <LuxuryExperience />
       </motion.div>
 
-      <NewArrivals />
+
 
       {/* Promotional Banner */}
       <section className="py-20 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">

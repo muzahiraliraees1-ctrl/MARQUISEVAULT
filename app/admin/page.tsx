@@ -45,7 +45,7 @@ import Link from "next/link"
 const stats = [
   {
     title: "Total Revenue",
-    value: "$248,500",
+    value: "PKR 248500",
     change: "+12.5%",
     trend: "up",
     icon: DollarSign,
@@ -53,7 +53,7 @@ const stats = [
   },
   {
     title: "Orders",
-    value: "1,234",
+    value: "1234",
     change: "+8.2%",
     trend: "up",
     icon: ShoppingBag,
@@ -152,7 +152,7 @@ const recentOrders = [
 ]
 
 const recentActivity = [
-  { action: "New order placed", detail: "Order #ORD-006 for $3,450", time: "2 min ago", icon: ShoppingBag },
+  { action: "New order placed", detail: "Order #ORD-006 for PKR 3450", time: "2 min ago", icon: ShoppingBag },
   { action: "Product updated", detail: "Birkin 30 stock updated", time: "15 min ago", icon: Package },
   { action: "New customer", detail: "john.smith@email.com registered", time: "1 hour ago", icon: Users },
   { action: "Order shipped", detail: "Order #ORD-003 shipped via DHL", time: "3 hours ago", icon: TrendingUp },

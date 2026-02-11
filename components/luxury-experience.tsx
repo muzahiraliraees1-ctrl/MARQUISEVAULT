@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ShieldCheck, Truck, Headphones, Award } from "lucide-react"
+import { ShieldCheck, Wallet, CheckCircle2, Headphones } from "lucide-react"
 
 const services = [
   {
@@ -10,19 +10,19 @@ const services = [
     description: "Every item is meticulously inspected and certified by our expert authenticators."
   },
   {
-    icon: Truck,
-    title: "Worldwide Express",
-    description: "Complimentary white-glove shipping on all orders over $500, delivered to your door."
+    icon: Wallet,
+    title: "Cash on Delivery",
+    description: "Enjoy the convenience of paying at your doorstep for a seamless and secure shopping experience."
+  },
+  {
+    icon: CheckCircle2,
+    title: "Verified Payment",
+    description: "Secure transaction monitoring—we confirm every payment swiftly for your absolute peace of mind."
   },
   {
     icon: Headphones,
-    title: "Private Concierge",
-    description: "Dedicated specialists available 24/7 to assist with your personal luxury needs."
-  },
-  {
-    icon: Award,
-    title: "Maison Standards",
-    description: "We uphold the highest quality benchmarks in the industry for every synthetic leather piece."
+    title: "Dedicated Support",
+    description: "Expert assistance available to help with your inquiries, order tracking, and style needs."
   }
 ]
 

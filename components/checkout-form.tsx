@@ -91,7 +91,7 @@ export function CheckoutForm() {
                   <Input
                     id="phone"
                     type="tel"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="03xx-xxxxxxx"
                     className="mt-1.5"
                   />
                 </div>
@@ -137,29 +137,30 @@ export function CheckoutForm() {
                         <SelectValue placeholder="Select state" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="CA">California</SelectItem>
-                        <SelectItem value="NY">New York</SelectItem>
-                        <SelectItem value="TX">Texas</SelectItem>
-                        <SelectItem value="FL">Florida</SelectItem>
+                        <SelectItem value="Punjab">Punjab</SelectItem>
+                        <SelectItem value="Sindh">Sindh</SelectItem>
+                        <SelectItem value="KPK">Khyber Pakhtunkhwa (KPK)</SelectItem>
+                        <SelectItem value="Balochistan">Balochistan</SelectItem>
+                        <SelectItem value="ICT">Islamabad Capital Territory</SelectItem>
+                        <SelectItem value="GB">Gilgit-Baltistan</SelectItem>
+                        <SelectItem value="AJK">Azad Jammu & Kashmir (AJK)</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="zip">ZIP Code</Label>
+                    <Label htmlFor="zip">Postal Code</Label>
                     <Input id="zip" required className="mt-1.5" />
                   </div>
                   <div>
                     <Label htmlFor="country">Country</Label>
-                    <Select defaultValue="US">
+                    <Select defaultValue="PK">
                       <SelectTrigger className="mt-1.5">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="US">United States</SelectItem>
-                        <SelectItem value="CA">Canada</SelectItem>
-                        <SelectItem value="UK">United Kingdom</SelectItem>
+                        <SelectItem value="PK">Pakistan</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -251,8 +252,7 @@ export function CheckoutForm() {
                 "Processing..."
               ) : (
                 <>
-                  <Lock className="h-4 w-4 mr-2" />
-                  Pay PKR {grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                  Pay PKR {grandTotal}
                 </>
               )}
             </Button>
@@ -296,7 +296,7 @@ export function CheckoutForm() {
                     </p>
                   </div>
                   <p className="font-medium">
-                    PKR {(item.product.price * item.quantity).toLocaleString()}
+                    PKR {item.product.price * item.quantity}
                   </p>
                 </div>
               ))}
@@ -307,7 +307,7 @@ export function CheckoutForm() {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Subtotal</span>
-                <span>PKR {total.toLocaleString()}</span>
+                <span>PKR {total}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Shipping</span>
@@ -328,7 +328,7 @@ export function CheckoutForm() {
             <div className="flex justify-between text-lg font-medium">
               <span>Total</span>
               <span>
-                PKR {grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                PKR {grandTotal}
               </span>
             </div>
 
@@ -336,7 +336,7 @@ export function CheckoutForm() {
             <div className="mt-6 pt-6 border-t border-border space-y-3">
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Truck className="h-4 w-4" />
-                <span>Free shipping on orders over PKR 5,000</span>
+                <span>Free shipping on orders over PKR 5000</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Shield className="h-4 w-4" />

@@ -39,18 +39,18 @@ export const brands: Brand[] = [
     productCount: 24,
   },
   {
-    id: "gucci",
-    name: "GUCCI",
+    id: "sleek-tote",
+    name: "SLEEK TOTE",
     logo: "/brands/gucci.svg",
-    description: "Italian luxury since 1921",
-    productCount: 28,
+    description: "Modern sophistication since 2024",
+    productCount: 1,
   },
   {
-    id: "dior",
-    name: "DIOR",
+    id: "elara-tote",
+    name: "ELARA TOTE BAG",
     logo: "/brands/dior.svg",
-    description: "Parisian couture since 1946",
-    productCount: 26,
+    description: "Timeless luxury since 2024",
+    productCount: 1,
   },
 ]
 
@@ -76,7 +76,7 @@ export const products: Product[] = [
     ],
     colors: ["Tan", "Black"],
     inStock: true,
-    isFeatured: true,
+    isFeatured: false,
     occasion: "Business",
   },
   {
@@ -99,7 +99,7 @@ export const products: Product[] = [
     ],
     colors: ["Black"],
     inStock: true,
-    isFeatured: true,
+    isFeatured: false,
     occasion: "Business",
   },
   {
@@ -122,7 +122,7 @@ export const products: Product[] = [
     ],
     colors: ["Black"],
     inStock: true,
-    isFeatured: true,
+    isFeatured: false,
     occasion: "Weekend",
   },
   {
@@ -145,7 +145,7 @@ export const products: Product[] = [
     ],
     colors: ["Black"],
     inStock: true,
-    isFeatured: true,
+    isFeatured: false,
     occasion: "Work",
   },
   {
@@ -170,11 +170,12 @@ export const products: Product[] = [
   },
   {
     id: "mv-5",
-    name: "ELARA Tote Bag",
+    name: "ELARA TOTE BAG",
     brand: "MARQUISE VAULT",
-    price: 3900,
-    image: "/products/local-4.png",
-    images: ["/products/local-4.png", "/products/sleek-tote-2.png"],
+    price: 3899,
+    originalPrice: 6000,
+    image: "/products/elara-tote-new.png",
+    images: ["/products/elara-tote-new.png"],
     category: "Totes",
     description: "Sophisticated and versatile tote bag designed for the modern professional. Features secure magnetic closure, adjustable handle for comfortable carry, premium stainless-steel hardware, and multiple organizational compartments. Crafted from high-quality PU leather.",
     details: [
@@ -194,11 +195,12 @@ export const products: Product[] = [
   },
   {
     id: "mv-6",
-    name: "SLEEK Tote Bag",
+    name: "SLEEK TOTE BAG",
     brand: "MARQUISE VAULT",
-    price: 4200,
-    image: "/products/local-5.png",
-    images: ["/products/local-5.png", "/products/sleek-tote-1.png"],
+    price: 4299,
+    originalPrice: 6500,
+    image: "/products/sleek-tote-new.png",
+    images: ["/products/sleek-tote-new.png"],
     category: "Totes",
     description: "A sleek and functional tote bag designed for the modern professional. Features a secure zip closure, two compartments with magnetic closures, and premium stainless-steel hardware. Crafted from high-quality PU leather for a sophisticated look.",
     details: [
@@ -236,7 +238,7 @@ export const products: Product[] = [
     ],
     colors: ["Black", "Grey"],
     inStock: true,
-    isNew: true,
+    isNew: false,
     occasion: "Weekend",
   },
   {
@@ -260,7 +262,7 @@ export const products: Product[] = [
     ],
     colors: ["Tan", "Burgundy"],
     inStock: true,
-    isNew: true,
+    isNew: false,
     occasion: "Gala",
   },
   {
@@ -304,7 +306,7 @@ export const products: Product[] = [
     ],
     colors: ["Black"],
     inStock: true,
-    isNew: true,
+    isNew: false,
     occasion: "Business",
   },
   {
@@ -348,14 +350,15 @@ export const products: Product[] = [
     ],
     colors: ["Black"],
     inStock: true,
-    isNew: true,
+    isNew: false,
     occasion: "Work",
   },
   {
     id: "mv-new-5",
-    name: "ELARA Tote Bag",
+    name: "ELARA TOTE BAG",
     brand: "MARQUISE VAULT",
-    price: 3900,
+    price: 3899,
+    originalPrice: 6000,
     image: "/products/local-10.png",
     images: ["/products/local-10.png", "/products/sleek-tote-2.png"],
     category: "Totes",
@@ -372,9 +375,10 @@ export const products: Product[] = [
     ],
     colors: ["Brown", "Black"],
     inStock: true,
-    isNew: true,
+    isNew: false,
     occasion: "Business",
   },
+
   {
     id: "6",
     name: "Lady Dior Medium",
@@ -396,7 +400,7 @@ export const products: Product[] = [
     ],
     colors: ["Black", "Blush", "Navy"],
     inStock: true,
-    isFeatured: true,
+    isFeatured: false,
     occasion: "Gala",
   },
   {
@@ -420,7 +424,7 @@ export const products: Product[] = [
     ],
     colors: ["Black", "Navy", "Grey"],
     inStock: true,
-    isNew: true,
+    isNew: false,
     occasion: "Gala",
   },
   {
@@ -444,7 +448,7 @@ export const products: Product[] = [
     ],
     colors: ["Blue Oblique", "Black"],
     inStock: true,
-    isNew: true,
+    isNew: false,
     occasion: "Weekend",
   },
 ]

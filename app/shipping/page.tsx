@@ -10,7 +10,7 @@ export default function ShippingPage() {
             title: "Domestic Delivery",
             region: "Pakistan",
             duration: "3-5 Business Days",
-            cost: "Complimentary over PKR 50,000",
+            cost: "Complimentary over PKR 50000",
             description: "Our domestic orders are handled by premium courier partners to ensure safe and timely delivery to your doorstep."
         },
         {
