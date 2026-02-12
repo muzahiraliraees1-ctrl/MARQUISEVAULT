@@ -6,7 +6,7 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { ChevronLeft, CreditCard, Truck, Shield, Lock } from "lucide-react"
+import { ChevronLeft, CreditCard, Truck, Shield, Lock, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -25,6 +25,8 @@ export function CheckoutForm() {
   const router = useRouter()
   const { items, total, clearCart } = useCart()
   const [isProcessing, setIsProcessing] = useState(false)
+  const [showSuccess, setShowSuccess] = useState(false)
+  const [placedOrderDetails, setPlacedOrderDetails] = useState<any>(null)
   // const [shippingMethod, setShippingMethod] = useState("standard")
   const shippingCost = total >= 5000 ? 0 : 200
   const tax = 0
@@ -66,9 +68,55 @@ export function CheckoutForm() {
 
     const whatsappUrl = `https://wa.me/923452618575?text=${encodeURIComponent(message)}`
 
-    window.open(whatsappUrl, '_blank')
+    // Store order info for the success page before clearing cart
+    setPlacedOrderDetails({
+      summary: message,
+      url: whatsappUrl
+    })
+
+    // Show success message first
+    setShowSuccess(true)
+
+    // Clear cart immediately
+    clearCart()
+
+    // Redirect to WhatsApp after a short delay so user can see the success message
+    setTimeout(() => {
+      window.open(whatsappUrl, '_blank')
+    }, 2000)
 
     setIsProcessing(false)
+  }
+
+  if (showSuccess) {
+    return (
+      <div className="container mx-auto px-4 py-24 text-center">
+        <div className="flex justify-center mb-6">
+          <div className="h-20 w-20 bg-green-100 rounded-full flex items-center justify-center">
+            <CheckCircle2 className="h-10 w-10 text-green-600" />
+          </div>
+        </div>
+        <h1 className="font-serif text-4xl mb-4">Order Placed!</h1>
+        <p className="text-xl text-muted-foreground mb-8 max-w-md mx-auto">
+          Your order has been placed successfully in CHECK OUT. You are being redirected to WhatsApp to confirm your details.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href="/">
+            <Button size="lg" variant="outline">Back to Home</Button>
+          </Link>
+          <Button
+            size="lg"
+            onClick={() => {
+              if (placedOrderDetails?.url) {
+                window.open(placedOrderDetails.url, '_blank')
+              }
+            }}
+          >
+            Re-open WhatsApp
+          </Button>
+        </div>
+      </div>
+    )
   }
 
   if (items.length === 0) {

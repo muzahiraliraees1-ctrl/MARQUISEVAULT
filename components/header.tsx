@@ -83,6 +83,13 @@ export function Header() {
             <SheetContent side="left" className="w-full sm:w-80 overflow-y-auto">
               <nav className="flex flex-col gap-10 mt-12 pb-32 text-left items-start px-6">
                 <Link
+                  href="/"
+                  className="text-lg font-medium hover:text-accent transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link
                   href="/product/mv-featured-1"
                   className="text-lg font-medium hover:text-accent transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
