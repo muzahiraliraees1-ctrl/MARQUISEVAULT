@@ -25,7 +25,7 @@ export function WhatsAppFloat() {
         <AnimatePresence>
             {isVisible && (
                 <motion.a
-                    href="https://wa.me/923298239335" // Updated contact number
+                    href="https://wa.me/923452618575" // Updated contact number
                     target="_blank"
                     rel="noopener noreferrer"
                     initial={{ opacity: 0, scale: 0.8, y: 20 }}

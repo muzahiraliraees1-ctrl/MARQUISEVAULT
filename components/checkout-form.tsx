@@ -64,7 +64,7 @@ export function CheckoutForm() {
       `*Payment Method:* Cash on Delivery\n\n` +
       `Please confirm my order.`
 
-    const whatsappUrl = `https://wa.me/923298239335?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/923452618575?text=${encodeURIComponent(message)}`
 
     window.open(whatsappUrl, '_blank')
 

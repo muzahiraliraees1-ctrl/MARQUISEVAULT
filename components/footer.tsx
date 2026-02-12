@@ -104,8 +104,9 @@ export function Footer() {
               <li>
                 <Link href="/contact" className="hover:text-accent transition-colors">Concierge Services</Link>
               </li>
+
               <li>
-                <span className="text-accent">0329 8239335</span>
+                <span className="text-accent">0345 2618575</span>
               </li>
               <li>
                 <Link href="/return-exchange" className="hover:text-accent transition-colors">Return & Exchange</Link>

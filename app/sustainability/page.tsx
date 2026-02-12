@@ -38,8 +38,8 @@ export default function SustainabilityPage() {
 
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <motion.p
-                        initial={{ opacity: 0, tracking: "0.2em" }}
-                        animate={{ opacity: 1, tracking: "0.4em" }}
+                        initial={{ opacity: 0, letterSpacing: "0.2em" }}
+                        animate={{ opacity: 1, letterSpacing: "0.4em" }}
                         className="text-accent uppercase text-xs mb-4 font-medium"
                     >
                         Our Sustainable Commitment
