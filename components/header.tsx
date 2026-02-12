@@ -104,13 +104,6 @@ export function Header() {
                   ELARA BLACK
                 </Link>
                 <Link
-                  href="/product/mv-5"
-                  className="text-lg font-medium hover:text-accent transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  ELARA TOTE BAG
-                </Link>
-                <Link
                   href="/product/mv-featured-3"
                   className="text-lg font-medium hover:text-accent transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
@@ -131,21 +124,6 @@ export function Header() {
                 >
                   Blogs
                 </Link>
-                <div className="w-full">
-                  <p className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">Collections</p>
-                  <div className="space-y-5 flex flex-col items-start w-full">
-                    {categories.slice(1).map((category) => (
-                      <Link
-                        key={category.slug}
-                        href={`/collections/${category.slug}`}
-                        className="block py-4 hover:text-accent transition-colors text-xl w-full"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {category.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
               </nav>
             </SheetContent>
           </Sheet>
