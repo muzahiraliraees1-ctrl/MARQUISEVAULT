@@ -97,11 +97,18 @@ export function Header() {
                   ELARA BURGUNDY BROWN BAG
                 </Link>
                 <Link
-                  href="/product/mv-6"
+                  href="/product/mv-featured-2"
                   className="text-lg font-medium hover:text-accent transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  SLEEK TOTE BAG
+                  ELARA BLACK
+                </Link>
+                <Link
+                  href="/product/mv-featured-3"
+                  className="text-lg font-medium hover:text-accent transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  SLEEK BROWN
                 </Link>
                 <Link
                   href="/contact"

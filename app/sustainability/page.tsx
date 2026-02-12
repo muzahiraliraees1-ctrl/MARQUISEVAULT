@@ -150,9 +150,6 @@ export default function SustainabilityPage() {
                                 <p className="font-serif italic text-primary/60 text-xl">
                                     Fashion that supports people, protects resources, and creates lasting impact.
                                 </p>
-                                <Button asChild variant="luxury" size="lg" className="mt-8">
-                                    <Link href="/collections/all">EXPLORE COLLECTIONS</Link>
-                                </Button>
                             </div>
                         </motion.div>
                     </motion.div>

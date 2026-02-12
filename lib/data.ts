@@ -692,7 +692,7 @@ export const heroSlides = [
     title: "New Season Arrivals",
     subtitle: "Discover the latest collections from the world's most prestigious houses",
     image: "/hero/hero-1.jpg",
-    cta: "SHOP OUR COLLECTION",
+
     link: "/collections/new",
   },
   {
@@ -700,7 +700,7 @@ export const heroSlides = [
     title: "Timeless Classics",
     subtitle: "Investment pieces that transcend trends",
     image: "/hero/hero-2.jpg",
-    cta: "EXPLORE COLLECTIONS",
+
     link: "/collections/all",
   },
 ]

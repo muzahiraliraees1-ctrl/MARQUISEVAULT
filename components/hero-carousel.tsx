@@ -76,22 +76,6 @@ export function HeroCarousel() {
               >
                 {slide.subtitle}
               </p>
-              <Link
-                href={slide.link}
-                className={cn(
-                  "transition-all duration-700 delay-400",
-                  index === currentSlide
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-8"
-                )}
-              >
-                <Button
-                  size="lg"
-                  className="bg-card text-card-foreground hover:bg-card/90 uppercase tracking-wider px-8"
-                >
-                  {slide.cta}
-                </Button>
-              </Link>
             </div>
           </div>
         </div>
