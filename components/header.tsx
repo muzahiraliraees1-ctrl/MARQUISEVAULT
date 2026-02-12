@@ -83,11 +83,11 @@ export function Header() {
             <SheetContent side="left" className="w-full sm:w-80 overflow-y-auto">
               <nav className="flex flex-col gap-10 mt-12 pb-32 text-left items-start px-6">
                 <Link
-                  href="/product/mv-5"
+                  href="/product/mv-featured-1"
                   className="text-lg font-medium hover:text-accent transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  ELARA TOTE BAG
+                  ELARA BURGUNDY BROWN BAG
                 </Link>
                 <Link
                   href="/product/mv-6"
@@ -149,10 +149,10 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              href="/product/mv-5"
+              href="/product/mv-featured-1"
               className="text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors"
             >
-              ELARA TOTE BAG
+              ELARA BURGUNDY BROWN BAG
             </Link>
             <Link
               href="/product/mv-6"

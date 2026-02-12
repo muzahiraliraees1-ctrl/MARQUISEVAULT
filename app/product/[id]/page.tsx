@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation"
 import { products } from "@/lib/data"
 import { ProductDetails } from "@/components/product-details"
-import { RelatedProducts } from "@/components/related-products"
 
 interface ProductPageProps {
   params: Promise<{ id: string }>
@@ -37,16 +36,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
     notFound()
   }
 
-  const relatedProducts = products
-    .filter((p) => p.brand === product.brand && p.id !== product.id)
-    .slice(0, 4)
-
   return (
     <main className="min-h-screen">
       <ProductDetails product={product} />
-      {relatedProducts.length > 0 && (
-        <RelatedProducts products={relatedProducts} />
-      )}
     </main>
   )
 }

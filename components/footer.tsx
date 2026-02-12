@@ -86,12 +86,6 @@ export function Footer() {
               <li>
                 <Link href="/collections/new" className="hover:text-accent transition-colors">New Arrivals</Link>
               </li>
-              <li>
-                <Link href="/brands/chanel" className="hover:text-accent transition-colors">House of Chanel</Link>
-              </li>
-              <li>
-                <Link href="/collections/limited" className="hover:text-accent transition-colors">Limited Edition</Link>
-              </li>
             </ul>
           </div>
 
