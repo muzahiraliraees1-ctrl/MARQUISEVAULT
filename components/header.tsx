@@ -104,6 +104,13 @@ export function Header() {
                   ELARA BLACK
                 </Link>
                 <Link
+                  href="/product/mv-5"
+                  className="text-lg font-medium hover:text-accent transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  ELARA TOTE BAG
+                </Link>
+                <Link
                   href="/product/mv-featured-3"
                   className="text-lg font-medium hover:text-accent transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
