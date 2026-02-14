@@ -59,7 +59,7 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
       notFound()
     }
     filteredProducts = products.filter(
-      (p) => p.category.toLowerCase().replace(" ", "-") === slug
+      (p) => p.category.toLowerCase().replaceAll(" ", "-") === slug
     )
     title = category.name
     description = `Discover our selection of luxury ${category.name.toLowerCase()}.`
