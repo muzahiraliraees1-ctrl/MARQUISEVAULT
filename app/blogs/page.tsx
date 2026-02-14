@@ -8,7 +8,32 @@ import { products } from "@/lib/data"
 import { ProductCard } from "@/components/product-card"
 
 export default function BlogsPage() {
-    const posts: any[] = []
+    const posts = [
+        {
+            id: 1,
+            title: "Styling the SLEEK Collection: From Day to Night",
+            excerpt: "The SLEEK collection, featuring our signature Beige and Black totes, is designed for the modern woman who values both form and function. Learn how to transition these versatile pieces seamlessly.",
+            date: "February 14, 2026",
+            category: "Styling",
+            image: "/products/marquise-featured-1.jpg"
+        },
+        {
+            id: 2,
+            title: "The ELARA Series: Crafted for Success",
+            excerpt: "Our ELARA bags in Burgundy Brown and Black represent the pinnacle of executive style. Discover the thoughtful design elements that make these carryalls the ultimate professional companion.",
+            date: "February 12, 2026",
+            category: "Design",
+            image: "/products/marquise-featured-4.jpg"
+        },
+        {
+            id: 3,
+            title: "Beyond Aesthetic: The Science of Quality",
+            excerpt: "Explore the premium materials and handcrafted techniques that define every Marquise Vault piece. From specialized finishes to reinforced stitching, quality is in the details.",
+            date: "February 10, 2026",
+            category: "Craftsmanship",
+            image: "/products/elara-black-detail-5.jpg"
+        }
+    ]
 
     // Get bags that are on the landing page (Featured or New)
     const landingPageBags = products.filter(p => p.isFeatured || p.isNew).slice(0, 8)
