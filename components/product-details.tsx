@@ -307,14 +307,20 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               <AccordionContent className="pb-6">
                 <div className="text-sm text-muted-foreground space-y-4 font-light">
                   <p>
-                    <strong>Materials:</strong> 100% Full-grain Italian Calf Leather.
-                    Lining: 100% Organic Cotton Canvas.
-                    Hardware: Gold-plated Brass.
+                    This tote bag is crafted from high-quality PU leather, designed to offer durability, elegance, and long-lasting shine. The premium material gives a smooth finish while maintaining its shape and strength over time.
                   </p>
                   <p>
-                    <strong>Care Instructions:</strong> Avoid direct contact with water, oil, and perfume.
-                    Store in the provided dust bag when not in use. Clean with a soft, dry cloth.
-                    Professional leather cleaning recommended once a year.
+                    <strong>Usage:</strong><br />
+                    Perfect for daily use, office, university, meetings, and casual outings. It easily carries your essentials like wallet, phone, makeup, diary, and more while keeping your look classy and sophisticated.
+                  </p>
+                  <p>
+                    <strong>Care Instructions:</strong>
+                    <ul className="list-disc pl-5 space-y-1 mt-2">
+                      <li>Clean gently with a soft, dry or slightly damp cloth.</li>
+                      <li>Avoid excessive water and harsh chemicals.</li>
+                      <li>Store in a dust bag when not in use.</li>
+                      <li>Keep away from direct heat and prolonged sunlight to maintain its texture and color.</li>
+                    </ul>
                   </p>
                 </div>
               </AccordionContent>

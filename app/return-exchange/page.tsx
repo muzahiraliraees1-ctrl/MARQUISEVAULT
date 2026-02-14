@@ -26,8 +26,8 @@ export default function ReturnExchangePage() {
                             <p className="mb-4">
                                 In the unlikely event that an item is proven to be inauthentic by a verified third-party authenticator, we will offer a full refund, including return shipping costs.
                             </p>
-                            <p className="mb-4">
-                                If you believe an item has been significantly misrepresented in its description, please contact our concierge team within 48 hours of receiving your order to request a review.
+                            <p className="text-muted-foreground font-light mb-8">
+                                Our clients' satisfaction is our ultimate priority. If you're not completely satisfied with your purchase, contact us at <strong>marquisevault1@gmail.com</strong> or WhatsApp at <strong>0345 2618575</strong> within 14 days of receiving your item.
                             </p>
                         </div>
                     </section>
@@ -38,7 +38,7 @@ export default function ReturnExchangePage() {
                             <AccordionItem value="item-1">
                                 <AccordionTrigger>How do I start a return for an authenticity claim?</AccordionTrigger>
                                 <AccordionContent>
-                                    Please contact us at concierge@marquisevault.com within 48 hours of delivery. Include your order number and the written statement from a recognized authenticator.
+                                    Please contact us at marquisevault1@gmail.com within 48 hours of delivery. Include your order number and the written statement from a recognized authenticator.
                                 </AccordionContent>
                             </AccordionItem>
                             <AccordionItem value="item-2">

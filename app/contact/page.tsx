@@ -62,7 +62,7 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <p className="font-medium mb-1 tracking-wide">Email</p>
-                                    <p className="text-muted-foreground font-light">concierge@marquisevault.com</p>
+                                    <p className="text-muted-foreground font-light">marquisevault1@gmail.com</p>
                                 </div>
                             </div>
 
@@ -110,7 +110,7 @@ export default function ContactPage() {
 
                                         <div className="space-y-2">
                                             <label htmlFor="email" className="text-[10px] uppercase tracking-[0.2em] font-medium text-accent">Email</label>
-                                            <Input id="email" type="email" placeholder="jane@example.com" required className="bg-secondary/10 border-none h-12 rounded-xl focus-visible:ring-1 focus-visible:ring-primary/20" />
+                                            <Input id="email" type="email" placeholder="marquisevault1@gmail.com" required className="bg-secondary/10 border-none h-12 rounded-xl focus-visible:ring-1 focus-visible:ring-primary/20" />
                                         </div>
 
                                         <div className="space-y-2">
