@@ -73,8 +73,6 @@ export default function ContactPage() {
                                 <div>
                                     <p className="font-medium mb-1 tracking-wide">Boutique</p>
                                     <p className="text-muted-foreground font-light leading-relaxed">
-                                        Marquise Vault Headquarters<br />
-                                        Fashion Avenue, Karachi Mall<br />
                                         Karachi, Pakistan
                                     </p>
                                 </div>

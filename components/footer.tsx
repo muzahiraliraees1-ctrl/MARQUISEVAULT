@@ -145,7 +145,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-primary-foreground/30 font-light border-t border-primary-foreground/5 pt-8">
           <p>&copy; 2026 MARQUISE VAULT. All rights reserved.</p>
-          <p>Karachi &bull; Milan &bull; Paris &bull; Dubai</p>
+          <p>Karachi &bull; Pakistan</p>
         </div>
       </div>
     </footer>
