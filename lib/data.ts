@@ -663,13 +663,13 @@ export const products: Product[] = [
     brand: "MARQUISE VAULT",
     price: 3899,
     originalPrice: 6000,
-    image: "/products/marquise-featured-4.jpg",
+    image: "/products/elara-black-detail-5.jpg",
     images: [
+      "/products/elara-black-detail-5.jpg",
       "/products/sleek-tote-gallery-1.jpg",
       "/products/sleek-tote-gallery-2.jpg",
       "/products/sleek-tote-gallery-3.jpg",
       "/products/sleek-tote-gallery-4.jpg",
-      "/products/elara-black-detail-5.jpg"
     ],
     category: "Totes",
     description: "Experience the ultimate in luxury and functionality. The Elite Carryall is designed for the modern lifestyle, offering both space and style.",
