@@ -590,7 +590,7 @@ export const products: Product[] = [
       "Interior zip pockets",
       "Handcrafted finish",
     ],
-    colors: ["Brown"],
+    colors: ["Beige"],
     inStock: true,
     isFeatured: true,
     occasion: "Business",
