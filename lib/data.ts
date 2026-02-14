@@ -579,7 +579,6 @@ export const products: Product[] = [
     images: [
       "/products/marquise-featured-1.jpg",
       "/products/elara-burgundy-detail-1.jpg",
-      "/products/elara-burgundy-detail-3.jpg",
       "/products/elara-burgundy-detail-5.jpg"
     ],
     category: "Totes",
