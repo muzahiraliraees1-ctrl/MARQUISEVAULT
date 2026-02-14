@@ -8,24 +8,7 @@ import { products } from "@/lib/data"
 import { ProductCard } from "@/components/product-card"
 
 export default function BlogsPage() {
-    const posts = [
-        {
-            id: 2,
-            title: "Investment Pieces: Why Chanel Classic Flaps Retain Value",
-            excerpt: "Analyzing the market trends and historical data that make the Chanel Classic Flap a sound financial investment.",
-            date: "September 28, 2025",
-            category: "Investment",
-            image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=800&auto=format&fit=crop"
-        },
-        {
-            id: 3,
-            title: "Care & Maintenance: Preserving Your Luxury Assets",
-            excerpt: "Essential tips and techniques for maintaining the pristine condition of your luxury handbags in humid climates.",
-            date: "September 15, 2025",
-            category: "Care Guide",
-            image: "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=800&auto=format&fit=crop"
-        }
-    ]
+    const posts: any[] = []
 
     // Get bags that are on the landing page (Featured or New)
     const landingPageBags = products.filter(p => p.isFeatured || p.isNew).slice(0, 8)
@@ -103,17 +86,6 @@ export default function BlogsPage() {
                         ))}
                     </div>
 
-                    <div className="text-center mt-16">
-                        <Link href="/collections/all">
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="px-12 py-4 bg-primary text-white text-xs font-bold uppercase tracking-[0.2em] rounded-full hover:bg-accent transition-colors"
-                            >
-                                Shop the Collection
-                            </motion.button>
-                        </Link>
-                    </div>
                 </motion.div>
             </div>
         </main>
