@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
+import Image from "next/image"
 import {
   LayoutDashboard,
   Package,
@@ -289,7 +290,7 @@ export default function AdminLayout({
                   <button className="flex items-center gap-3 p-1.5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-xl transition-colors">
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center overflow-hidden">
                       {admin?.avatar ? (
-                        <img src={admin.avatar} alt={admin.name} className="w-full h-full object-cover" />
+                        <Image src={admin.avatar} alt={admin.name} fill className="object-cover" />
                       ) : (
                         <User className="h-4 w-4 text-white" />
                       )}

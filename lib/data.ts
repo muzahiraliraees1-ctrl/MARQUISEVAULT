@@ -571,7 +571,7 @@ export const products: Product[] = [
   },
   {
     id: "mv-featured-1",
-    name: "ELARA BURGUNDY BROWN BAG",
+    name: "SLEEK BEIGE",
     brand: "MARQUISE VAULT",
     price: 4299,
     originalPrice: 6500,
@@ -579,7 +579,6 @@ export const products: Product[] = [
     images: [
       "/products/marquise-featured-1.jpg",
       "/products/elara-burgundy-detail-1.jpg",
-      "/products/elara-burgundy-detail-2.jpg",
       "/products/elara-burgundy-detail-3.jpg",
       "/products/elara-burgundy-detail-5.jpg"
     ],
@@ -598,7 +597,7 @@ export const products: Product[] = [
   },
   {
     id: "mv-featured-2",
-    name: "ELARA BLACK",
+    name: "SLEEK BLACK",
     brand: "MARQUISE VAULT",
     price: 4299,
     originalPrice: 6500,
@@ -607,7 +606,6 @@ export const products: Product[] = [
       "/products/marquise-featured-2.jpg",
       "/products/elara-black-detail-1.jpg",
       "/products/elara-black-detail-2.jpg",
-      "/products/elara-black-detail-3.jpg",
       "/products/elara-black-detail-4.jpg"
     ],
     category: "Totes",
@@ -625,7 +623,7 @@ export const products: Product[] = [
   },
   {
     id: "mv-featured-3",
-    name: "SLEEK BROWN",
+    name: "ELARA BURGANDY BROWN",
     brand: "MARQUISE VAULT",
     price: 3899,
     originalPrice: 6000,
@@ -651,7 +649,7 @@ export const products: Product[] = [
   },
   {
     id: "mv-featured-4",
-    name: "ELARA TOTE BAG",
+    name: "ELARA BLACK",
     brand: "MARQUISE VAULT",
     price: 3899,
     originalPrice: 6000,
@@ -660,7 +658,8 @@ export const products: Product[] = [
       "/products/sleek-tote-gallery-1.jpg",
       "/products/sleek-tote-gallery-2.jpg",
       "/products/sleek-tote-gallery-3.jpg",
-      "/products/sleek-tote-gallery-4.jpg"
+      "/products/sleek-tote-gallery-4.jpg",
+      "/products/elara-black-detail-5.jpg"
     ],
     category: "Totes",
     description: "Experience the ultimate in luxury and functionality. The Elite Carryall is designed for the modern lifestyle, offering both space and style.",

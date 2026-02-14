@@ -94,21 +94,28 @@ export function Header() {
                   className="text-lg font-medium hover:text-accent transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  ELARA BURGUNDY BROWN BAG
+                  SLEEK BEIGE
                 </Link>
                 <Link
                   href="/product/mv-featured-2"
                   className="text-lg font-medium hover:text-accent transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  ELARA BLACK
+                  SLEEK BLACK
                 </Link>
                 <Link
                   href="/product/mv-featured-3"
                   className="text-lg font-medium hover:text-accent transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  SLEEK BROWN
+                  ELARA BURGANDY BROWN
+                </Link>
+                <Link
+                  href="/product/mv-featured-4"
+                  className="text-lg font-medium hover:text-accent transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  ELARA BLACK
                 </Link>
                 <Link
                   href="/contact"
@@ -148,16 +155,16 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              href="/product/mv-featured-1"
+              href="/product/mv-featured-2"
               className="text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors"
             >
-              ELARA BURGUNDY BROWN BAG
+              SLEEK BLACK
             </Link>
             <Link
-              href="/product/mv-6"
+              href="/product/mv-featured-4"
               className="text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors"
             >
-              SLEEK TOTE BAG
+              ELARA BLACK
             </Link>
             <div className="relative group">
               <button className="text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors">
@@ -252,11 +259,12 @@ export function Header() {
                             setSearchQuery("")
                           }}
                         >
-                          <div className="w-12 h-12 bg-secondary rounded overflow-hidden">
-                            <img
+                          <div className="w-12 h-12 bg-secondary rounded overflow-hidden relative">
+                            <Image
                               src={product.image}
                               alt={product.name}
-                              className="w-full h-full object-cover"
+                              fill
+                              className="object-cover"
                             />
                           </div>
                           <div className="flex-1 min-w-0">

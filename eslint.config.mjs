@@ -5,7 +5,10 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-    ...compat.extends("next/core-web-vitals"),
+    ...compat.extends("next/core-web-vitals").map(config => {
+        const { root, ...rest } = config;
+        return rest;
+    }),
 ];
 
 export default eslintConfig;
