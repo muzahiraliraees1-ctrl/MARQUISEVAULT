@@ -47,6 +47,17 @@ export function ProductCard({ product, className }: ProductCardProps) {
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
 
+          {/* Secondary Image (Hover) */}
+          {product.images?.[3] && (
+            <Image
+              src={product.images[3]}
+              alt={`${product.name} - Alternate View`}
+              fill
+              className="absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-secondary"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            />
+          )}
+
           {/* Badges */}
           <div className="absolute top-3 left-3 flex flex-col gap-2">
             {product.isNew && (
