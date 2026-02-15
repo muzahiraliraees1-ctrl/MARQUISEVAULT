@@ -147,7 +147,7 @@ export function Header() {
                 priority
               />
             </div>
-            <span className="font-serif text-sm md:text-base tracking-[0.2em] font-bold text-primary">
+            <span className="font-serif text-xs md:text-sm tracking-[0.2em] font-bold text-primary">
               MARQUISEVAULT
             </span>
           </Link>
